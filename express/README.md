@@ -1,6 +1,6 @@
 # Space Resource API
 
-A simple Express.js API for managing fictional space resources. This project demonstrates basic RESTful API concepts with an in-memory data store. It also features a Swagger documentation for API at [http://localhost:3000/api-docs](http://localhost:3000/api-docs), which allows as well for testing the API through the docs page. Included as well is a sample collection of requests for Space Traders API at [space-traders-postman.json](space-traders/space-traders-postman.json) for use with Postman to learn about REST principles.
+A simple Express.js API for managing fictional space resources. This project demonstrates basic RESTful API concepts with an in-memory data store. It also features a Swagger documentation for API at [http://localhost:3000/api-docs](http://localhost:3000/api-docs), which allows as well for testing the API through the docs page.
 
 ## Features
 
