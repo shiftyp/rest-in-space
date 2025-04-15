@@ -2,9 +2,22 @@
 
 Welcome to the REST API Lab! This hands-on exercise will introduce you to RESTful API concepts and Express.js, a popular Node.js framework for building web applications and APIs.
 
+## 🔌 What is an API?
+
+API stands for Application Programming Interface. An API is a set of rules and protocols that allows one software application to interact with another. Think of it as a contract between different software components that defines how they should interact with each other.
+
+APIs are everywhere in software development:
+
+- **Web APIs**: Allow web browsers to communicate with web servers
+- **Operating System APIs**: Enable applications to interact with the operating system
+- **Library APIs**: Provide functions and methods for developers to use
+- **Hardware APIs**: Allow software to interact with hardware components
+
+In this lab, we'll focus on Web APIs, specifically REST APIs, which are a common way to expose data and functionality over the internet. Web APIs typically use HTTP as the communication protocol and exchange data in formats like JSON or XML.
+
 ## 🌐 What is a REST API?
 
-In a nutshell, REST is an architecture for API's, whereby the state (current values of data) of resources (think data grouped around common objects your API operates on) are transferred (using HTTP or some other mechanism) between a client and a server for the purpose of reading or modifying that state. While we're transferring state, the requests should themselves be "stateless" meaning that any request should be able to be processed by the server without knowledge of previous requests.
+REST stands for Representational State Transfer, and in a nutshell, REST is an architecture for API's, whereby the state (current values of data) of resources (think data grouped around common objects your API operates on) are transferred (using HTTP or some other mechanism) between a client and a server for the purpose of reading or modifying that state. While we're transferring state, the requests should themselves be "stateless" meaning that any request should be able to be processed by the server without knowledge of previous requests.
 
 ### 💯 Key REST Ideas
 
