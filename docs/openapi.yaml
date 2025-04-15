@@ -1,0 +1,196 @@
+openapi: 3.0.0
+info:
+  title: Space Resource API
+  description: A simple API for managing fictional space resources
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+paths:
+  /api/resources:
+    get:
+      summary: Get all resources
+      description: Returns a list of all space resources
+      operationId: getAllResources
+      responses:
+        '200':
+          description: A list of space resources
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Resource'
+    post:
+      summary: Create a new resource
+      description: Adds a new space resource to the collection
+      operationId: createResource
+      requestBody:
+        description: Resource to add
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResourceInput'
+      responses:
+        '201':
+          description: Resource created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/resources/{id}:
+    get:
+      summary: Get a specific resource
+      description: Returns details of a specific space resource
+      operationId: getResourceById
+      parameters:
+        - name: id
+          in: path
+          description: ID of the resource to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Resource details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+        '404':
+          description: Resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a resource
+      description: Updates an existing space resource
+      operationId: updateResource
+      parameters:
+        - name: id
+          in: path
+          description: ID of the resource to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Updated resource values
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ResourceUpdateInput'
+      responses:
+        '200':
+          description: Resource updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+        '404':
+          description: Resource not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Resource:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the resource
+          example: '1'
+        name:
+          type: string
+          description: Name of the resource
+          example: 'Quantium'
+        rarity:
+          type: string
+          description: Rarity level of the resource
+          enum: [Common, Uncommon, Rare, Legendary]
+          example: 'Rare'
+        value:
+          type: number
+          description: Base value per unit
+          example: 5000
+        description:
+          type: string
+          description: Description of the resource
+          example: 'A highly unstable element used in quantum computing and FTL drives'
+        origin:
+          type: string
+          description: Where the resource is typically found
+          example: 'Neutron star remnants'
+      required:
+        - id
+        - name
+        - rarity
+        - value
+    ResourceInput:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the resource
+          example: 'Cosmicite'
+        rarity:
+          type: string
+          description: Rarity level of the resource
+          enum: [Common, Uncommon, Rare, Legendary]
+          example: 'Uncommon'
+        value:
+          type: number
+          description: Base value per unit
+          example: 3000
+        description:
+          type: string
+          description: Description of the resource
+          example: 'A lightweight material with unique gravitational properties'
+        origin:
+          type: string
+          description: Where the resource is typically found
+          example: 'Asteroid belts in the outer rim'
+      required:
+        - name
+        - rarity
+        - value
+    ResourceUpdateInput:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the resource
+        rarity:
+          type: string
+          description: Rarity level of the resource
+          enum: [Common, Uncommon, Rare, Legendary]
+        value:
+          type: number
+          description: Base value per unit
+        description:
+          type: string
+          description: Description of the resource
+        origin:
+          type: string
+          description: Where the resource is typically found
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          description: Error message
+          example: 'Resource not found'
+        message:
+          type: string
+          description: Detailed error message
+          example: 'The requested resource with id 999 does not exist'
