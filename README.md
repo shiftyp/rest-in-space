@@ -1,10 +1,10 @@
 # 🚀 REST API Lab
 
-Welcome to the REST API Lab! This hands-on exercise will introduce you to RESTful API concepts and Express.js, a popular Node.js framework for building web applications and APIs.
+Welcome to the REST API Lab! This hands-on exercise will introduce you to RESTful API concepts and Express.js, a Node.js framework for building web applications and APIs.
 
 ## 🔌 What is an API?
 
-API stands for Application Programming Interface. An API is a set of rules and protocols that allows one software application to interact with another. Think of it as a contract between different software components that defines how they should interact with each other.
+API stands for Application Programming Interface. An API is a set of rules and protocols that allows one software application to interact with another. Think of it as a contract between different software components that defines how they should interact with each other, as well as the data they can exchange.
 
 APIs are everywhere in software development:
 
@@ -17,7 +17,7 @@ In this lab, we'll focus on Web APIs, specifically REST APIs, which are a common
 
 ## 🌐 What is a REST API?
 
-REST stands for Representational State Transfer, and in a nutshell, REST is an architecture for API's, whereby the state (current values of data) of resources (think data grouped around common objects your API operates on) are transferred (using HTTP or some other mechanism) between a client and a server for the purpose of reading or modifying that state. While we're transferring state, the requests should themselves be "stateless" meaning that any request should be able to be processed by the server without knowledge of previous requests.
+REST stands for Representational State Transfer, and in a nutshell, REST is an architecture for Web APIs, whereby the state (current values of data) of resources (think data grouped around common objects your API operates on) are transferred (using HTTP or some other mechanism) between a client and a server for the purpose of reading or modifying that state. While we're transferring state, the requests should themselves be "stateless" meaning that any request should be able to be processed by the server without knowledge of previous requests.
 
 ### 💯 Key REST Ideas
 
@@ -28,16 +28,16 @@ REST stands for Representational State Transfer, and in a nutshell, REST is an a
 5. **Layered System**: Client cannot tell if it's connected directly to the server
 6. **Cacheability**: Responses must define themselves as cacheable or non-cacheable to prevent clients from reusing stale or inappropriate data
 
-There are two additional principles called **Code on Demand** (CoD) and **Hypermedia As The Engine Of Application State** (HATEOAS), which are not directly related to our REST examples, but are an aspect of RESTful APIs. CoD allows clients to request and execute code on the server, which is used for example in websites to load JavaScript and create dynamic pages. HATEOAS allows clients to navigate and interact with resources through hyperlinks, which is can be used for dynamic content generation, although it is more common in HTML than in JSON.
+There are two additional principles called **Code on Demand** (CoD) and **Hypermedia As The Engine Of Application State** (HATEOAS), which are not directly related to our REST examples, but are an aspect of RESTful APIs. CoD allows clients to request and execute code on the server, which is used for example in websites to load JavaScript and create dynamic pages. HATEOAS allows clients to navigate and interact with resources through hyperlinks, which is can be used for dynamic content navigation, although it is more common in HTML than in JSON.
 
 While REST doesn't specify HTTP as the transport mechanism, HTTP is the most common and practical way to implement RESTful APIs. In REST HTTP API's (much acronym 🐶), HTTP methods (GET, POST, PUT, DELETE) are used to perform CRUD operations on resources.
 
-2. **HTTP Methods**: Uses standard HTTP methods for operations:
-   - GET: Retrieve a resource (Read)
-   - POST: Create a new resource (Create)
-   - PUT/PATCH: Update an existing resource (Update)
-   - DELETE: Remove a resource (Delete)
+### HTTP Methods
 
+- **POST**: Create a new resource (Create)
+- **GET**: Retrieve a resource (Read)
+- **PUT/PATCH**: Update an existing resource (Update)
+- **DELETE**: Remove a resource (Delete)
 
 ## 💻 Node.js and Express
 
