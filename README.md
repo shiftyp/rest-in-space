@@ -30,7 +30,7 @@ REST stands for Representational State Transfer, and in a nutshell, REST is an a
 
 There are two additional principles called **Code on Demand** (CoD) and **Hypermedia As The Engine Of Application State** (HATEOAS), which are not directly related to our REST examples, but are an aspect of RESTful APIs. CoD allows clients to request and execute code on the server, which is used for example in websites to load JavaScript and create dynamic pages. HATEOAS allows clients to navigate and interact with resources through hyperlinks, which is can be used for dynamic content navigation, although it is more common in HTML than in JSON.
 
-While REST doesn't specify HTTP as the transport mechanism, HTTP is the most common and practical way to implement RESTful APIs. In REST HTTP API's (much acronym 🐶), HTTP methods (GET, POST, PUT, DELETE) are used to perform CRUD operations on resources.
+While REST doesn't specify HTTP as the transport mechanism, HTTP is the most common and practical way to implement RESTful APIs. In HTTP REST API's (much acronym 🐶), HTTP methods (POST, GET, PUT / PATCH, DELETE) are used to perform CRUD operations on resources. There are additional methods, like HEAD and OPTIONS, but they are not directly related to our REST examples.
 
 ### HTTP Methods
 
