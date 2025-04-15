@@ -1,12 +1,12 @@
-# REST API Lab
+# 🚀 REST API Lab
 
 Welcome to the REST API Lab! This hands-on exercise will introduce you to RESTful API concepts and Express.js, a popular Node.js framework for building web applications and APIs.
 
-## What is a REST API?
+## 🌐 What is a REST API?
 
 REST (Representational State Transfer) is an architectural style for designing networked applications. RESTful APIs use HTTP requests to perform CRUD operations (Create, Read, Update, Delete) on resources, which are represented as URLs.
 
-### Key REST Ideas
+### 💯 Key REST Ideas
 
 1. **Resource-Based**: Everything is a resource, identified by a unique URL
 2. **Stateless**: Each request contains all information needed to complete it
@@ -19,7 +19,7 @@ In a nutshell, REST is an architecture for API's, whereby the state (current val
 
 There are two additional principles called **Code on Demand** (CoD) and **Hypermedia As The Engine Of Application State** (HATEOAS), which are not directly related to our REST examples, but are an aspect of RESTful APIs. CoD allows clients to request and execute code on the server, which is used for example in websites to load JavaScript and create dynamic pages. HATEOAS allows clients to navigate and interact with resources through hyperlinks, which is can be used for dynamic content generation, although it is more common in HTML than in JSON.
 
-While REST doesn't specify HTTP as the transport mechanism, HTTP is the most common and practical way to implement RESTful APIs. In REST HTTP API's (much acronym :dog:), HTTP methods (GET, POST, PUT, DELETE) are used to perform CRUD operations on resources.
+While REST doesn't specify HTTP as the transport mechanism, HTTP is the most common and practical way to implement RESTful APIs. In REST HTTP API's (much acronym 🐶), HTTP methods (GET, POST, PUT, DELETE) are used to perform CRUD operations on resources.
 
 2. **HTTP Methods**: Uses standard HTTP methods for operations:
    - GET: Retrieve a resource (Read)
@@ -28,7 +28,7 @@ While REST doesn't specify HTTP as the transport mechanism, HTTP is the most com
    - DELETE: Remove a resource (Delete)
 
 
-## Node.js and Express
+## 💻 Node.js and Express
 
 **Node.js** is a JavaScript runtime built on the Chrome Browser's "V8" JavaScript engine. It allows developers to run JavaScript on the server-side, outside of a browser environment. Like the browser Node.js uses an event-driven programming model, and has similar API's to the browser with the addition of Node.js specific APIs for accessing the file system, network, and other server-side capabilities.
 
@@ -50,7 +50,7 @@ While REST doesn't specify HTTP as the transport mechanism, HTTP is the most com
 - **Template Engines**: Generate HTML dynamically (though we focus on JSON for APIs)
 - **Error Handling**: Manage and respond to errors gracefully, either through middleware or specific error handling in routes
 
-### How They Work Together
+### 🧲 How They Work Together
 
 Node.js provides the runtime environment (like the browser is a runtime environment for a website), while Express provides the framework for building web applications and APIs. In a typical Express application:
 
@@ -60,7 +60,7 @@ Node.js provides the runtime environment (like the browser is a runtime environm
 
 This combination makes it easy to build servers that are extensible and scalable, in this case to build REST APIs that can serve JSON data to clients.
 
-## Overview
+## 🔎 Overview
 
 This lab consists of two parts:
 
@@ -68,7 +68,7 @@ This lab consists of two parts:
 
 2. **Express.js API Implementation**: Complete a partially built Express.js API for managing fictional space resources, implementing three core REST operations (GET, POST, PUT).
 
-## Learning Objectives
+## 📖 Learning Objectives
 
 - Understand RESTful API principles and best practices
 - Experience working with a production API (SpaceTraders.io)
@@ -76,14 +76,14 @@ This lab consists of two parts:
 - Practice handling HTTP methods, routes, and responses
 - Gain familiarity with API documentation using OpenAPI/Swagger
 
-## Prerequisites
+## 📝 Prerequisites
 
 - Node.js installed (or using the provided IDX environment)
 - Basic JavaScript knowledge
 - Postman installed (or Postman Web)
 - A SpaceTraders.io account (you'll create this during the lab)
 
-## Getting Started
+## 🔰 Getting Started
 
 ### Part 1: SpaceTraders API Exercise
 
@@ -98,13 +98,13 @@ This lab consists of two parts:
 3. Implement the missing endpoints in the Space Resource API
 4. Test your implementation using the Swagger documentation (which when your server is running is located at [http://localhost:3000/api-docs](http://localhost:3000/api-docs))
 
-## Time Allocation
+## ⏰ Time Allocation
 
 - SpaceTraders API Exercise: 10 minutes
 - Express.js API Implementation: 10 minutes
 - Total lab time: 20 minutes
 
-## Resources
+## 📓 Resources
 
 - [Express.js Documentation](https://expressjs.com/)
 - [SpaceTraders API Documentation](https://spacetraders.io/docs/api)
