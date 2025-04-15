@@ -50,7 +50,7 @@ While REST doesn't specify HTTP as the transport mechanism, HTTP is the most com
 
 ### 🧲 How They Work Together
 
-Node.js provides the runtime environment (like the browser is a runtime environment for a website), while Express provides the framework for building web applications and APIs. In a typical Express application:
+Node.js provides the runtime environment (like the browser is a runtime environment for a website), while Express provides the framework for building web applications and APIs. In an Express application:
 
 1. Node.js handles the server operations and JavaScript execution
 2. Express manages routing, middleware, and HTTP interactions
@@ -92,8 +92,8 @@ This lab consists of two parts:
 ### Part 2: Express.js API Implementation
 
 1. Navigate to the `express-api` directory
-2. Follow the instructions in `exercise.md`
-3. Implement the missing endpoints in the Space Resource API
+2. Follow the instructions in `exercise.md` individually
+3. Implement the missing endpoints in the Space Resource API leveraging the documentation and teaching staff to guide your implementation
 4. Test your implementation using the Swagger documentation (which when your server is running is located at [http://localhost:3000/api-docs](http://localhost:3000/api-docs))
 
 ## ⏰ Time Allocation
