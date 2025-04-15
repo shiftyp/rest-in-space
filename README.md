@@ -4,7 +4,7 @@ Welcome to the REST API Lab! This hands-on exercise will introduce you to RESTfu
 
 ## 🌐 What is a REST API?
 
-REST (Representational State Transfer) is an architectural style for designing networked applications. RESTful APIs use HTTP requests to perform CRUD operations (Create, Read, Update, Delete) on resources, which are represented as URLs.
+In a nutshell, REST is an architecture for API's, whereby the state (current values of data) of resources (think data grouped around common objects your API operates on) are transferred (using HTTP or some other mechanism) between a client and a server for the purpose of reading or modifying that state. While we're transferring state, the requests should themselves be "stateless" meaning that any request should be able to be processed by the server without knowledge of previous requests.
 
 ### 💯 Key REST Ideas
 
@@ -14,8 +14,6 @@ REST (Representational State Transfer) is an architectural style for designing n
 4. **Uniform Interface**: Consistent way to interact with resources
 5. **Layered System**: Client cannot tell if it's connected directly to the server
 6. **Cacheability**: Responses must define themselves as cacheable or non-cacheable to prevent clients from reusing stale or inappropriate data
-
-In a nutshell, REST is an architecture for API's, whereby the state (current values of data) of resources (think data grouped around common objects your API operates on) are transferred (using HTTP or some other mechanism) between a client and a server for the purpose of reading or modifying that state. While we're transferring state, the requests should themselves be "stateless" meaning that any request should be able to be processed by the server without knowledge of previous requests.
 
 There are two additional principles called **Code on Demand** (CoD) and **Hypermedia As The Engine Of Application State** (HATEOAS), which are not directly related to our REST examples, but are an aspect of RESTful APIs. CoD allows clients to request and execute code on the server, which is used for example in websites to load JavaScript and create dynamic pages. HATEOAS allows clients to navigate and interact with resources through hyperlinks, which is can be used for dynamic content generation, although it is more common in HTML than in JSON.
 
