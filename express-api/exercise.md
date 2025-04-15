@@ -1,22 +1,17 @@
 # Express.js API Exercise
 
-## Introduction to Node.js and Express
-
-Before we begin, here's a quick primer on the technologies we're using:
-
-- **Node.js** is a JavaScript runtime that allows you to run JavaScript on the server-side. Unlike browser JavaScript, Node.js provides access to the file system, network, and other server capabilities.
-
-- **Express.js** is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It simplifies the process of writing server-side code and handling HTTP requests.
-
-- **REST (Representational State Transfer)** is an architectural style for designing networked applications. RESTful APIs use HTTP requests to perform CRUD operations (Create, Read, Update, Delete) on resources.
-
 In this exercise, you'll complete a partially built Express.js API for managing fictional space resources. The API follows RESTful principles and includes OpenAPI/Swagger documentation.
+
+## Prerequisites
+
+- Node.js installed (or using the provided IDX environment)
+- Text editor or IDE (or the IDX environment)
 
 ## Setup (2 minutes)
 
-1. Navigate to the `express` directory in your terminal:
+1. Navigate to the `express-api` directory in your terminal:
   ```bash
-  cd express
+  cd express-api
   ```
 
 2. Install dependencies using npm (Node Package Manager):
