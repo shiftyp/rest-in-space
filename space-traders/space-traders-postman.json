@@ -1,0 +1,4044 @@
+{
+	"info": {
+		"_postman_id": "9e1de20f-3977-40ac-b6e6-639badee0dd4",
+		"name": "SpaceTraders API",
+		"description": "SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.\n\nThe API is documented using [OpenAPI](https://github.com/SpaceTradersAPI/api-docs). You can send your first request right here in your browser to check the status of the game server.\n\n```json http\n{\n  \"method\": \"GET\",\n  \"url\": \"https://api.spacetraders.io/v2\",\n}\n```\n\nUnlike a traditional game, SpaceTraders does not have a first-party client or app to play the game. Instead, you can use the API to build your own client, write a script to automate your ships, or try an app built by the community.\n\nWe have a [Discord channel](https://discord.com/invite/jh6zurdWk5) where you can share your projects, ask questions, and get help from other players.\n\n\n\n\nContact Support:\n Name: Joel Brubaker\n Email: joel@spacetraders.io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43995130",
+		"_collection_link": "https://www.postman.com/tomodaore/spaceapi/collection/d1xp3v8/spacetraders-api?action=share&source=collection_link&creator=43995130"
+	},
+	"item": [
+		{
+			"name": "systems",
+			"item": [
+				{
+					"name": "{systemSymbol}",
+					"item": [
+						{
+							"name": "waypoints",
+							"item": [
+								{
+									"name": "{waypointSymbol}",
+									"item": [
+										{
+											"name": "Get Waypoint",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints/:waypointSymbol",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"systems",
+														":systemSymbol",
+														"waypoints",
+														":waypointSymbol"
+													],
+													"variable": [
+														{
+															"key": "systemSymbol",
+															"value": "non anim",
+															"description": "(Required) The system symbol"
+														},
+														{
+															"key": "waypointSymbol",
+															"value": "non anim",
+															"description": "(Required) The waypoint symbol"
+														}
+													]
+												},
+												"description": "View the details of a waypoint."
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints/:waypointSymbol",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"systems",
+																":systemSymbol",
+																"waypoints",
+																":waypointSymbol"
+															],
+															"variable": [
+																{
+																	"key": "systemSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The system symbol"
+																},
+																{
+																	"key": "waypointSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The waypoint symbol"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/Waypoint.json not found in the OpenAPI spec\"\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Get Market",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints/:waypointSymbol/market",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"systems",
+														":systemSymbol",
+														"waypoints",
+														":waypointSymbol",
+														"market"
+													],
+													"variable": [
+														{
+															"key": "systemSymbol",
+															"value": "non anim",
+															"description": "(Required) The system symbol"
+														},
+														{
+															"key": "waypointSymbol",
+															"value": "non anim",
+															"description": "(Required) The waypoint symbol"
+														}
+													]
+												},
+												"description": "Retrieve imports, exports and exchange data from a marketplace. Imports can be sold, exports can be purchased, and exchange goods can be purchased or sold. Send a ship to the waypoint to access trade good prices and recent transactions."
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints/:waypointSymbol/market",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"systems",
+																":systemSymbol",
+																"waypoints",
+																":waypointSymbol",
+																"market"
+															],
+															"variable": [
+																{
+																	"key": "systemSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The system symbol"
+																},
+																{
+																	"key": "waypointSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The waypoint symbol"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/Market.json not found in the OpenAPI spec\"\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Get Shipyard",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints/:waypointSymbol/shipyard",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"systems",
+														":systemSymbol",
+														"waypoints",
+														":waypointSymbol",
+														"shipyard"
+													],
+													"variable": [
+														{
+															"key": "systemSymbol",
+															"value": "non anim",
+															"description": "(Required) The system symbol"
+														},
+														{
+															"key": "waypointSymbol",
+															"value": "non anim",
+															"description": "(Required) The waypoint symbol"
+														}
+													]
+												},
+												"description": "Get the shipyard for a waypoint. Send a ship to the waypoint to access ships that are currently available for purchase and recent transactions."
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints/:waypointSymbol/shipyard",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"systems",
+																":systemSymbol",
+																"waypoints",
+																":waypointSymbol",
+																"shipyard"
+															],
+															"variable": [
+																{
+																	"key": "systemSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The system symbol"
+																},
+																{
+																	"key": "waypointSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The waypoint symbol"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/Shipyard.json not found in the OpenAPI spec\"\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Get Jump Gate",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints/:waypointSymbol/jump-gate",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"systems",
+														":systemSymbol",
+														"waypoints",
+														":waypointSymbol",
+														"jump-gate"
+													],
+													"variable": [
+														{
+															"key": "systemSymbol",
+															"value": "non anim",
+															"description": "(Required) The system symbol"
+														},
+														{
+															"key": "waypointSymbol",
+															"value": "non anim",
+															"description": "(Required) The waypoint symbol"
+														}
+													]
+												},
+												"description": "Get jump gate details for a waypoint."
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints/:waypointSymbol/jump-gate",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"systems",
+																":systemSymbol",
+																"waypoints",
+																":waypointSymbol",
+																"jump-gate"
+															],
+															"variable": [
+																{
+																	"key": "systemSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The system symbol"
+																},
+																{
+																	"key": "waypointSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The waypoint symbol"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/JumpGate.json not found in the OpenAPI spec\"\n  }\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "List Waypoints",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints?page=1&limit=8",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"systems",
+												":systemSymbol",
+												"waypoints"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1",
+													"description": "What entry offset to request"
+												},
+												{
+													"key": "limit",
+													"value": "8",
+													"description": "How many entries to return per page"
+												}
+											],
+											"variable": [
+												{
+													"key": "systemSymbol",
+													"value": "non anim",
+													"description": "(Required) The system symbol"
+												}
+											]
+										},
+										"description": "Fetch all of the waypoints for a given system. System must be charted or a ship must be present to return waypoint details."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/systems/:systemSymbol/waypoints?page=1&limit=8",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"systems",
+														":systemSymbol",
+														"waypoints"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "1"
+														},
+														{
+															"key": "limit",
+															"value": "8"
+														}
+													],
+													"variable": [
+														{
+															"key": "systemSymbol",
+															"value": "non anim",
+															"description": "(Required) The system symbol"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": [\n    {\n      \"value\": \"reference ../models/Waypoint.json not found in the OpenAPI spec\"\n    },\n    {\n      \"value\": \"reference ../models/Waypoint.json not found in the OpenAPI spec\"\n    }\n  ],\n  \"meta\": {\n    \"value\": \"reference ../models/Meta.json not found in the OpenAPI spec\"\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get System",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/systems/:systemSymbol",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"systems",
+										":systemSymbol"
+									],
+									"variable": [
+										{
+											"key": "systemSymbol",
+											"value": "X1-OE",
+											"description": "(Required) The system symbol"
+										}
+									]
+								},
+								"description": "Get the details of a system."
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/systems/:systemSymbol",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"systems",
+												":systemSymbol"
+											],
+											"variable": [
+												{
+													"key": "systemSymbol",
+													"value": "X1-OE",
+													"description": "(Required) The system symbol"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/System.json not found in the OpenAPI spec\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "List Systems",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/systems?page=1&limit=8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"systems"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "What entry offset to request"
+								},
+								{
+									"key": "limit",
+									"value": "8",
+									"description": "How many entries to return per page"
+								}
+							]
+						},
+						"description": "Return a list of all systems."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/systems?page=1&limit=8",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"systems"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": [\n    {\n      \"value\": \"reference ../models/System.json not found in the OpenAPI spec\"\n    },\n    {\n      \"value\": \"reference ../models/System.json not found in the OpenAPI spec\"\n    }\n  ],\n  \"meta\": {\n    \"value\": \"reference ../models/Meta.json not found in the OpenAPI spec\"\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "factions",
+			"item": [
+				{
+					"name": "List Factions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/factions?page=1&limit=8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"factions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "What entry offset to request"
+								},
+								{
+									"key": "limit",
+									"value": "8",
+									"description": "How many entries to return per page"
+								}
+							]
+						},
+						"description": "List all discovered factions in the game."
+					},
+					"response": [
+						{
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/factions?page=1&limit=8",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"factions"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": [\n    {\n      \"value\": \"reference ../models/Faction.json not found in the OpenAPI spec\"\n    },\n    {\n      \"value\": \"reference ../models/Faction.json not found in the OpenAPI spec\"\n    }\n  ],\n  \"meta\": {\n    \"value\": \"reference ../models/Meta.json not found in the OpenAPI spec\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Faction",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/factions/:factionSymbol",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"factions",
+								":factionSymbol"
+							],
+							"variable": [
+								{
+									"key": "factionSymbol",
+									"value": "CGR",
+									"description": "(Required) The faction symbol"
+								}
+							]
+						},
+						"description": "View the details of a faction."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/factions/:factionSymbol",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"factions",
+										":factionSymbol"
+									],
+									"variable": [
+										{
+											"key": "factionSymbol",
+											"value": "CGR",
+											"description": "(Required) The faction symbol"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/Faction.json not found in the OpenAPI spec\"\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "my",
+			"item": [
+				{
+					"name": "contracts",
+					"item": [
+						{
+							"name": "{contractId}",
+							"item": [
+								{
+									"name": "Get Contract",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/contracts/:contractId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"contracts",
+												":contractId"
+											],
+											"variable": [
+												{
+													"key": "contractId",
+													"value": "non anim",
+													"description": "(Required) The contract ID"
+												}
+											]
+										},
+										"description": "Get the details of a contract by ID."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/contracts/:contractId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"contracts",
+														":contractId"
+													],
+													"variable": [
+														{
+															"key": "contractId",
+															"value": "non anim",
+															"description": "(Required) The contract ID"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/Contract.json not found in the OpenAPI spec\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Accept Contract",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/contracts/:contractId/accept",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"contracts",
+												":contractId",
+												"accept"
+											],
+											"variable": [
+												{
+													"key": "contractId",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Accept a contract."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/contracts/:contractId/accept",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"contracts",
+														":contractId",
+														"accept"
+													],
+													"variable": [
+														{
+															"key": "contractId",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"contract\": {\n      \"value\": \"reference ../models/Contract.json not found in the OpenAPI spec\"\n    },\n    \"agent\": {\n      \"value\": \"reference ../models/Agent.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Deliver Contract",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"shipSymbol\": \"Ut exercitation non\",\n  \"tradeSymbol\": \"incididunt laborum fugiat\",\n  \"units\": -52013081\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/contracts/:contractId/deliver",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"contracts",
+												":contractId",
+												"deliver"
+											],
+											"variable": [
+												{
+													"key": "contractId",
+													"value": "non anim",
+													"description": "(Required) The ID of the contract"
+												}
+											]
+										},
+										"description": "Deliver cargo on a given contract."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"shipSymbol\": \"Ut exercitation non\",\n  \"tradeSymbol\": \"incididunt laborum fugiat\",\n  \"units\": -52013081\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/contracts/:contractId/deliver",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"contracts",
+														":contractId",
+														"deliver"
+													],
+													"variable": [
+														{
+															"key": "contractId",
+															"value": "non anim",
+															"description": "(Required) The ID of the contract"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"contract\": {\n      \"value\": \"reference ../models/Contract.json not found in the OpenAPI spec\"\n    },\n    \"cargo\": {\n      \"value\": \"reference ../models/ShipCargo.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Fulfill Contract",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/contracts/:contractId/fulfill",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"contracts",
+												":contractId",
+												"fulfill"
+											],
+											"variable": [
+												{
+													"key": "contractId",
+													"value": "non anim",
+													"description": "(Required) The ID of the contract"
+												}
+											]
+										},
+										"description": "Fulfill a contract"
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/contracts/:contractId/fulfill",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"contracts",
+														":contractId",
+														"fulfill"
+													],
+													"variable": [
+														{
+															"key": "contractId",
+															"value": "non anim",
+															"description": "(Required) The ID of the contract"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"contract\": {\n      \"value\": \"reference ../models/Contract.json not found in the OpenAPI spec\"\n    },\n    \"agent\": {\n      \"value\": \"reference ../models/Agent.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "List Contracts",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/my/contracts?page=1&limit=8",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"my",
+										"contracts"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"description": "What entry offset to request"
+										},
+										{
+											"key": "limit",
+											"value": "8",
+											"description": "How many entries to return per page"
+										}
+									]
+								},
+								"description": "List all of your contracts."
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/contracts?page=1&limit=8",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"contracts"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "8"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": [\n    {\n      \"value\": \"reference ../models/Contract.json not found in the OpenAPI spec\"\n    },\n    {\n      \"value\": \"reference ../models/Contract.json not found in the OpenAPI spec\"\n    }\n  ],\n  \"meta\": {\n    \"value\": \"reference ../models/Meta.json not found in the OpenAPI spec\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "ships",
+					"item": [
+						{
+							"name": "{shipSymbol}",
+							"item": [
+								{
+									"name": "nav",
+									"item": [
+										{
+											"name": "Patch Ship Nav",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"flightMode\": {\n    \"value\": \"reference ../models/ShipNavFlightMode.json not found in the OpenAPI spec\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/nav",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"nav"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The ship symbol"
+														}
+													]
+												},
+												"description": "Update the nav data of a ship, such as the flight mode."
+											},
+											"response": [
+												{
+													"name": "The updated nav status of the ship.",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"flightMode\": {\n    \"value\": \"reference ../models/ShipNavFlightMode.json not found in the OpenAPI spec\"\n  }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/my/ships/:shipSymbol/nav",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"my",
+																"ships",
+																":shipSymbol",
+																"nav"
+															],
+															"variable": [
+																{
+																	"key": "shipSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The ship symbol"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/ShipNav.json not found in the OpenAPI spec\"\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Get Ship Nav",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/nav",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"nav"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The ship symbol"
+														}
+													]
+												},
+												"description": "Get the current nav status of a ship."
+											},
+											"response": [
+												{
+													"name": "The current nav status of the ship.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/my/ships/:shipSymbol/nav",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"my",
+																"ships",
+																":shipSymbol",
+																"nav"
+															],
+															"variable": [
+																{
+																	"key": "shipSymbol",
+																	"value": "non anim",
+																	"description": "(Required) The ship symbol"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/ShipNav.json not found in the OpenAPI spec\"\n  }\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "scan",
+									"item": [
+										{
+											"name": "Scan Systems",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/scan/systems",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"scan",
+														"systems"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Activate your ship's sensor arrays to scan for system information."
+											},
+											"response": [
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/my/ships/:shipSymbol/scan/systems",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"my",
+																"ships",
+																":shipSymbol",
+																"scan",
+																"systems"
+															],
+															"variable": [
+																{
+																	"key": "shipSymbol",
+																	"value": "non anim",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"data\": {\n    \"cooldown\": {\n      \"value\": \"reference ../models/Cooldown.json not found in the OpenAPI spec\"\n    },\n    \"systems\": [\n      {\n        \"value\": \"reference ../models/ScannedSystem.json not found in the OpenAPI spec\"\n      },\n      {\n        \"value\": \"reference ../models/ScannedSystem.json not found in the OpenAPI spec\"\n      }\n    ]\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Scan Waypoints",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/scan/waypoints",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"scan",
+														"waypoints"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Activate your ship's sensor arrays to scan for waypoint information."
+											},
+											"response": [
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/my/ships/:shipSymbol/scan/waypoints",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"my",
+																"ships",
+																":shipSymbol",
+																"scan",
+																"waypoints"
+															],
+															"variable": [
+																{
+																	"key": "shipSymbol",
+																	"value": "non anim",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"data\": {\n    \"cooldown\": {\n      \"value\": \"reference ../models/Cooldown.json not found in the OpenAPI spec\"\n    },\n    \"waypoints\": [\n      {\n        \"value\": \"reference ../models/ScannedWaypoint.json not found in the OpenAPI spec\"\n      },\n      {\n        \"value\": \"reference ../models/ScannedWaypoint.json not found in the OpenAPI spec\"\n      }\n    ]\n  }\n}"
+												}
+											]
+										},
+										{
+											"name": "Scan Ships",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/scan/ships",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"scan",
+														"ships"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												},
+												"description": "Activate your ship's sensor arrays to scan for ship information."
+											},
+											"response": [
+												{
+													"name": "Created",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Authorization",
+																"value": "Bearer <token>",
+																"description": "Added as a part of security scheme: bearer"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/my/ships/:shipSymbol/scan/ships",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"my",
+																"ships",
+																":shipSymbol",
+																"scan",
+																"ships"
+															],
+															"variable": [
+																{
+																	"key": "shipSymbol",
+																	"value": "non anim",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "Created",
+													"code": 201,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"data\": {\n    \"cooldown\": {\n      \"value\": \"reference ../models/Cooldown.json not found in the OpenAPI spec\"\n    },\n    \"ships\": [\n      {\n        \"value\": \"reference ../models/ScannedShip.json not found in the OpenAPI spec\"\n      },\n      {\n        \"value\": \"reference ../models/ScannedShip.json not found in the OpenAPI spec\"\n      }\n    ]\n  }\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Get Ship",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Retrieve the details of your ship."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/Ship.json not found in the OpenAPI spec\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Get Ship Cargo",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/cargo",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"cargo"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) The symbol of the ship"
+												}
+											]
+										},
+										"description": "Retrieve the cargo of your ship."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/cargo",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"cargo"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The symbol of the ship"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/ShipCargo.json not found in the OpenAPI spec\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Orbit Ship",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/orbit",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"orbit"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) The symbol of the ship"
+												}
+											]
+										},
+										"description": "Attempt to move your ship into orbit at it's current location. The request will only succeed if your ship is capable of moving into orbit at the time of the request.\n\nThe endpoint is idempotent - successive calls will succeed even if the ship is already in orbit."
+									},
+									"response": [
+										{
+											"name": "The ship has successfully moved into orbit at it's current location.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/orbit",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"orbit"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The symbol of the ship"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"nav\": {\n      \"value\": \"reference ../models/ShipNav.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Ship Refine",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"produce\": \"ALUMINUM\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/refine",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"refine"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) The symbol of the ship"
+												}
+											]
+										},
+										"description": "Attempt to refine the raw materials on your ship. The request will only succeed if your ship is capable of refining at the time of the request."
+									},
+									"response": [
+										{
+											"name": "The ship has successfully started refining.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"produce\": \"ALUMINUM\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/refine",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"refine"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The symbol of the ship"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"cargo\": {\n      \"value\": \"reference ../models/ShipCargo.json not found in the OpenAPI spec\"\n    },\n    \"cooldown\": {\n      \"value\": \"reference ../models/Cooldown.json not found in the OpenAPI spec\"\n    },\n    \"produced\": [\n      {\n        \"tradeSymbol\": \"enim sed tempor\",\n        \"units\": 11101906\n      },\n      {\n        \"tradeSymbol\": \"amet dolor velit Exc\",\n        \"units\": -18946159\n      }\n    ],\n    \"consumed\": [\n      {\n        \"tradeSymbol\": \"reprehenderit\",\n        \"units\": -38522656\n      },\n      {\n        \"tradeSymbol\": \"labore proident in\",\n        \"units\": -19798205\n      }\n    ]\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Create Chart",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/chart",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"chart"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) The symbol of the ship"
+												}
+											]
+										},
+										"description": "Command a ship to chart the current waypoint.\n\nWaypoints in the universe are uncharted by default. These locations will not show up in the API until they have been charted by a ship.\n\nCharting a location will record your agent as the one who created the chart."
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/chart",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"chart"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The symbol of the ship"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"chart\": {\n      \"value\": \"reference ../models/Chart.json not found in the OpenAPI spec\"\n    },\n    \"waypoint\": {\n      \"value\": \"reference ../models/Waypoint.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Get Ship Cooldown",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/cooldown",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"cooldown"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Retrieve the details of your ship's reactor cooldown. Some actions such as activating your jump drive, scanning, or extracting resources taxes your reactor and results in a cooldown.\n\nYour ship cannot perform additional actions until your cooldown has expired. The duration of your cooldown is relative to the power consumption of the related modules or mounts for the action taken.\n\nResponse returns a 204 status code (no-content) when the ship has no cooldown."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/cooldown",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"cooldown"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/Cooldown.json not found in the OpenAPI spec\"\n  }\n}"
+										},
+										{
+											"name": "No cooldown",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/cooldown",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"cooldown"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Dock Ship",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/dock",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"dock"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) The symbol of the ship"
+												}
+											]
+										},
+										"description": "Attempt to dock your ship at it's current location. Docking will only succeed if the waypoint is a dockable location, and your ship is capable of docking at the time of the request.\n\nThe endpoint is idempotent - successive calls will succeed even if the ship is already docked."
+									},
+									"response": [
+										{
+											"name": "The ship has successfully docked at it's current location.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/dock",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"dock"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The symbol of the ship"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"nav\": {\n      \"value\": \"reference ../models/ShipNav.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Create Survey",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/survey",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"survey"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) The symbol of the ship"
+												}
+											]
+										},
+										"description": "If you want to target specific yields for an extraction, you can survey a waypoint, such as an asteroid field, and send the survey in the body of the extract request. Each survey may have multiple deposits, and if a symbol shows up more than once, that indicates a higher chance of extracting that resource.\n\nYour ship will enter a cooldown between consecutive survey requests. Surveys will eventually expire after a period of time. Multiple ships can use the same survey for extraction."
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/survey",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"survey"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The symbol of the ship"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"surveys\": [\n      {\n        \"value\": \"reference ../models/Survey.json not found in the OpenAPI spec\"\n      },\n      {\n        \"value\": \"reference ../models/Survey.json not found in the OpenAPI spec\"\n      }\n    ],\n    \"cooldown\": {\n      \"value\": \"reference ../models/Cooldown.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Extract Resources",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"survey\": {\n    \"value\": \"reference ../models/Survey.json not found in the OpenAPI spec\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/extract",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"extract"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) The ship symbol"
+												}
+											]
+										},
+										"description": "Extract resources from the waypoint into your ship. Send an optional survey as the payload to target specific yields."
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"survey\": {\n    \"value\": \"reference ../models/Survey.json not found in the OpenAPI spec\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/extract",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"extract"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The ship symbol"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"extraction\": {\n      \"value\": \"reference ../models/Extraction.json not found in the OpenAPI spec\"\n    },\n    \"cooldown\": {\n      \"value\": \"reference ../models/Cooldown.json not found in the OpenAPI spec\"\n    },\n    \"cargo\": {\n      \"value\": \"reference ../models/ShipCargo.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Jettison Cargo",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"symbol\": \"proident fugiat minim ex\",\n  \"units\": 93110566\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/jettison",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"jettison"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Jettison cargo from your ship's cargo hold."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"symbol\": \"proident fugiat minim ex\",\n  \"units\": 93110566\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/jettison",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"jettison"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"cargo\": {\n      \"value\": \"reference ../models/ShipCargo.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Jump Ship",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"systemSymbol\": \"aliquip voluptate elit in incididunt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/jump",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"jump"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Jump your ship instantly to a target system. Unlike other forms of navigation, jumping requires a unit of antimatter."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"systemSymbol\": \"aliquip voluptate elit in incididunt\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/jump",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"jump"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"cooldown\": {\n      \"value\": \"reference ../models/Cooldown.json not found in the OpenAPI spec\"\n    },\n    \"nav\": {\n      \"value\": \"reference ../models/ShipNav.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Navigate Ship",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"waypointSymbol\": \"eiusmod do nostrud\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/navigate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"navigate"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) The ship symbol"
+												}
+											]
+										},
+										"description": "Navigate to a target destination. The destination must be located within the same system as the ship. Navigating will consume the necessary fuel and supplies from the ship's manifest, and will pay out crew wages from the agent's account.\n\nThe returned response will detail the route information including the expected time of arrival. Most ship actions are unavailable until the ship has arrived at it's destination.\n\nTo travel between systems, see the ship's warp or jump actions."
+									},
+									"response": [
+										{
+											"name": "The successful transit information including the route details and changes to ship fuel, supplies, and crew wages paid. The route includes the expected time of arrival.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"waypointSymbol\": \"eiusmod do nostrud\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/navigate",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"navigate"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) The ship symbol"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"nav\": {\n      \"value\": \"reference ../models/ShipNav.json not found in the OpenAPI spec\"\n    },\n    \"fuel\": {\n      \"value\": \"reference ../models/ShipFuel.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Warp Ship",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"waypointSymbol\": \"eiusmod do nostrud\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/warp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"warp"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Warp your ship to a target destination in another system. Warping will consume the necessary fuel and supplies from the ship's manifest, and will pay out crew wages from the agent's account.\n\nThe returned response will detail the route information including the expected time of arrival. Most ship actions are unavailable until the ship has arrived at it's destination."
+									},
+									"response": [
+										{
+											"name": "The successful transit information including the route details and changes to ship fuel, supplies, and crew wages paid. The route includes the expected time of arrival.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"waypointSymbol\": \"eiusmod do nostrud\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/warp",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"warp"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"nav\": {\n      \"value\": \"reference ../models/ShipNav.json not found in the OpenAPI spec\"\n    },\n    \"fuel\": {\n      \"value\": \"reference ../models/ShipFuel.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Sell Cargo",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"symbol\": \"cupidatat sit quis ipsum\",\n  \"units\": -77724793\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/sell",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"sell"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Sell cargo."
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"symbol\": \"cupidatat sit quis ipsum\",\n  \"units\": -77724793\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/sell",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"sell"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"cargo\": {\n      \"value\": \"reference ../models/ShipCargo.json not found in the OpenAPI spec\"\n    },\n    \"transaction\": {\n      \"value\": \"reference ../models/MarketTransaction.json not found in the OpenAPI spec\"\n    },\n    \"agent\": {\n      \"value\": \"reference ../models/Agent.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Refuel Ship",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/refuel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"refuel"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Refuel your ship from the local market."
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/refuel",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"refuel"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"agent\": {\n      \"value\": \"reference ../models/Agent.json not found in the OpenAPI spec\"\n    },\n    \"fuel\": {\n      \"value\": \"reference ../models/ShipFuel.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Purchase Cargo",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"symbol\": \"adipisicing magna laborum enim\",\n  \"units\": 24677691\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/purchase",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"purchase"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Purchase cargo."
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"symbol\": \"adipisicing magna laborum enim\",\n  \"units\": 24677691\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/purchase",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"purchase"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"cargo\": {\n      \"value\": \"reference ../models/ShipCargo.json not found in the OpenAPI spec\"\n    },\n    \"transaction\": {\n      \"value\": \"reference ../models/MarketTransaction.json not found in the OpenAPI spec\"\n    },\n    \"agent\": {\n      \"value\": \"reference ../models/Agent.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "Transfer Cargo",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"tradeSymbol\": \"enim exercita\",\n  \"units\": -47444471,\n  \"shipSymbol\": \"sunt labor\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships/:shipSymbol/transfer",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships",
+												":shipSymbol",
+												"transfer"
+											],
+											"variable": [
+												{
+													"key": "shipSymbol",
+													"value": "non anim",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Transfer cargo between ships."
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Bearer <token>",
+														"description": "Added as a part of security scheme: bearer"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"tradeSymbol\": \"enim exercita\",\n  \"units\": -47444471,\n  \"shipSymbol\": \"sunt labor\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/my/ships/:shipSymbol/transfer",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"my",
+														"ships",
+														":shipSymbol",
+														"transfer"
+													],
+													"variable": [
+														{
+															"key": "shipSymbol",
+															"value": "non anim",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"cargo\": {\n      \"value\": \"reference ../models/ShipCargo.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "List Ships",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/my/ships?page=1&limit=8",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"my",
+										"ships"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"description": "What entry offset to request"
+										},
+										{
+											"key": "limit",
+											"value": "8",
+											"description": "How many entries to return per page"
+										}
+									]
+								},
+								"description": "Retrieve all of your ships."
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/my/ships?page=1&limit=8",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "limit",
+													"value": "8"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": [\n    {\n      \"value\": \"reference ../models/Ship.json not found in the OpenAPI spec\"\n    },\n    {\n      \"value\": \"reference ../models/Ship.json not found in the OpenAPI spec\"\n    }\n  ],\n  \"meta\": {\n    \"value\": \"reference ../models/Meta.json not found in the OpenAPI spec\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "Purchase Ship",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"shipType\": {\n    \"value\": \"reference ../models/ShipType.json not found in the OpenAPI spec\"\n  },\n  \"waypointSymbol\": \"dolore nostrud\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/my/ships",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"my",
+										"ships"
+									]
+								},
+								"description": "Purchase a ship"
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer <token>",
+												"description": "Added as a part of security scheme: bearer"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"shipType\": {\n    \"value\": \"reference ../models/ShipType.json not found in the OpenAPI spec\"\n  },\n  \"waypointSymbol\": \"dolore nostrud\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/my/ships",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"my",
+												"ships"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"data\": {\n    \"ship\": {\n      \"value\": \"reference ../models/Ship.json not found in the OpenAPI spec\"\n    },\n    \"agent\": {\n      \"value\": \"reference ../models/Agent.json not found in the OpenAPI spec\"\n    },\n    \"transaction\": {\n      \"value\": \"reference ../models/ShipyardTransaction.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "My Agent Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/my/agent",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"my",
+								"agent"
+							]
+						},
+						"description": "Fetch your agent's details."
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <token>",
+										"description": "Added as a part of security scheme: bearer"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/my/agent",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"my",
+										"agent"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"data\": {\n    \"value\": \"reference ../models/Agent.json not found in the OpenAPI spec\"\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Register New Agent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"symbol\": \"BADGER\",\n  \"faction\": \"sit occaecat\",\n  \"email\": \"consequat fugiat pariatur\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/register",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "Creates a new agent and ties it to a temporary Account.\n\nThe agent symbol is a 3-14 character string that will represent your agent. This symbol will prefix the symbol of every ship you own. Agent symbols will be cast to all uppercase characters.\n\nA new agent will be granted an authorization token, a contract with their starting faction, a command ship with a jump drive, and one hundred thousand credits.\n\n> #### Keep your token safe and secure\n>\n> Save your token during the alpha phase. There is no way to regenerate this token without starting a new agent. In the future you will be able to generate and manage your tokens from the SpaceTraders website.\n\nYou can accept your contract using the `/my/contracts/{contractId}/accept` endpoint. You will want to navigate your command ship to a nearby asteroid field and execute the `/my/ships/{shipSymbol}/extract` endpoint to mine various types of ores and minerals.\n\nReturn to the contract destination and execute the `/my/ships/{shipSymbol}/deliver` endpoint to deposit goods into the contract.\n\nWhen your contract is fulfilled, you can call `/my/contracts/{contractId}/fulfill` to retrieve payment."
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"description": "Added as a part of security scheme: bearer"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"symbol\": \"BADGER\",\n  \"faction\": \"sit occaecat\",\n  \"email\": \"consequat fugiat pariatur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"data\": {\n    \"token\": \"elit id\",\n    \"agent\": {\n      \"value\": \"reference ../models/Agent.json not found in the OpenAPI spec\"\n    },\n    \"faction\": {\n      \"value\": \"reference ../models/Faction.json not found in the OpenAPI spec\"\n    },\n    \"contract\": {\n      \"value\": \"reference ../models/Contract.json not found in the OpenAPI spec\"\n    },\n    \"ship\": {\n      \"value\": \"reference ../models/Ship.json not found in the OpenAPI spec\"\n    }\n  }\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.spacetraders.io/v2",
+			"type": "string"
+		}
+	]
+}

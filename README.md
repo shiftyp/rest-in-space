@@ -1,6 +1,6 @@
 # Space Resource API
 
-A simple Express.js API for managing fictional space resources. This project demonstrates basic RESTful API concepts with an in-memory data store.
+A simple Express.js API for managing fictional space resources. This project demonstrates basic RESTful API concepts with an in-memory data store. It also features a Swagger documentation for API at [http://localhost:3000/api-docs](http://localhost:3000/api-docs), which allows as well for testing the API through the docs page. Included as well is a sample collection of requests for Space Traders API at [space-traders-postman.json](space-traders/space-traders-postman.json) for use with Postman to learn about REST principles.
 
 ## Features
 
@@ -13,7 +13,7 @@ A simple Express.js API for managing fictional space resources. This project dem
 
 ### Prerequisites
 
-- Node.js (v12 or higher)
+- Node.js
 - npm
 
 ### Installation
@@ -62,7 +62,7 @@ Updates an existing resource (all fields optional)
 
 The API comes pre-loaded with sample resources like Quantium, Stellarite, Voidstone, and Lunarium.
 
-## Future Enhancements
+## Possible Bonus Enhancements!
 
 - Add DELETE endpoint
 - Implement filtering and sorting
