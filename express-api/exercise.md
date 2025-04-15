@@ -26,9 +26,9 @@ In this exercise, you'll complete a partially built Express.js API for managing 
   ```
   This runs the script defined in package.json, which starts the Express server.
 
-4. Visit http://localhost:3000 in your browser to see the welcome message
+4. Visit http://localhost:3000 (Or the proxied URL from IDX) in your browser to see the welcome message
 
-5. Visit http://localhost:3000/api-docs to see the API documentation
+5. Visit http://localhost:3000/api-docs (Or the proxied URL from IDX) to see the API documentation
   This is a Swagger UI that automatically documents your API based on the OpenAPI specification.
 
 ## Your Task (8 minutes)
