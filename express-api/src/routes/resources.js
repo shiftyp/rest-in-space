@@ -42,12 +42,65 @@ let resources = [
   }
 ];
 
-// TODO: GET all resources
+// GET all resources
+router.get('/', (req, res) => {
+  res.json(resources);
+});
 
-// TODO: GET a specific resource by ID
+// GET a specific resource by ID
+router.get('/:id', (req, res) => {
+  const resource = resources.find(r => r.id === req.params.id);
+  
+  if (!resource) {
+    return res.status(404).json({ error: 'Resource not found' });
+  }
+  
+  res.json(resource);
+});
 
-// TODO: POST a new resource
+// POST a new resource
+router.post('/', (req, res) => {
+  const { name, rarity, value, description, origin } = req.body;
+  
+  // Basic validation
+  if (!name || !rarity || !value) {
+    return res.status(400).json({ error: 'Missing required fields (name, rarity, value)' });
+  }
+  
+  // Create new resource
+  const newResource = {
+    id: (resources.length + 1).toString(),
+    name,
+    rarity,
+    value: Number(value),
+    description: description || '',
+    origin: origin || 'Unknown'
+  };
+  
+  resources.push(newResource);
+  res.status(201).json(newResource);
+});
 
-// TODO: PUT (update) a resource
+// PUT (update) a resource
+router.put('/:id', (req, res) => {
+  const { name, rarity, value, description, origin } = req.body;
+  const resourceIndex = resources.findIndex(r => r.id === req.params.id);
+  
+  if (resourceIndex === -1) {
+    return res.status(404).json({ error: 'Resource not found' });
+  }
+  
+  // Update resource with new values, keeping existing values if not provided
+  resources[resourceIndex] = {
+    ...resources[resourceIndex],
+    name: name || resources[resourceIndex].name,
+    rarity: rarity || resources[resourceIndex].rarity,
+    value: value ? Number(value) : resources[resourceIndex].value,
+    description: description !== undefined ? description : resources[resourceIndex].description,
+    origin: origin !== undefined ? origin : resources[resourceIndex].origin
+  };
+  
+  res.json(resources[resourceIndex]);
+});
 
 export default router;
