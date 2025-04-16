@@ -41,6 +41,7 @@ app.get('/', (req, res) => {
   res.json({
     message: 'Welcome to the Space Resource API',
     endpoints: {
+      // An Example of HATEOAS
       resources: '/api/resources',
       documentation: '/api-docs'
     }
