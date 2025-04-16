@@ -10,25 +10,25 @@ APIs are everywhere in software development:
 
 - **Web APIs**: Allow web browsers to communicate with web servers
 - **Operating System APIs**: Enable applications to interact with the operating system
-- **Library APIs**: Provide functions and methods for developers to use
+- **Library APIs**: Provide methods and data for developers to use
 - **Hardware APIs**: Allow software to interact with hardware components
 
-In this lab, we'll focus on Web APIs, specifically REST APIs, which are a common way to expose data and functionality over the internet. Web APIs typically use HTTP as the communication protocol and exchange data in formats like JSON or XML.
+In this lab, we'll focus on Web APIs, specifically REST APIs, which are a common way to expose data and functionality over the internet. Web APIs typically use HTTP as the communication protocol and exchange data in formats like JSON (JavaScript Object Notation), YAML (Yet Another Markup Language), or less commonly various forms of XML (eXtensible Markup Language, not including HTML).
 
 ## 🌐 What is a REST API?
 
-REST stands for Representational State Transfer, and in a nutshell, REST is an architecture for Web APIs, whereby the state (current values of data) of resources (think data grouped around common objects your API operates on) are transferred (using HTTP or some other mechanism) between a client and a server for the purpose of reading or modifying that state. While we're transferring state, the requests should themselves be "stateless" meaning that any request should be able to be processed by the server without knowledge of previous requests.
+REST stands for Representational State Transfer. In a nutshell, REST is an architecture for Web APIs, whereby representations (think JSON) of the state (current values of data) of resources (think data grouped around common objects your API operates on) are transferred (using HTTP or some other mechanism) between a client and a server for the purpose of reading or modifying that state. While we're transferring state, the requests should themselves be "stateless" meaning that any request should be able to be processed by the server without knowledge of previous requests.
 
 ### 💯 Key REST Ideas
 
-1. **Resource-Based**: Everything is a resource, identified by a unique URL
-2. **Stateless**: Each request contains all information needed to complete it
-3. **Client-Server Architecture**: Separation of concerns between client and server
-4. **Uniform Interface**: Consistent way to interact with resources
-5. **Layered System**: Client cannot tell if it's connected directly to the server
-6. **Cacheability**: Responses must define themselves as cacheable or non-cacheable to prevent clients from reusing stale or inappropriate data
+1. **Resource-Based**: Everything is a resource, identified by a unique URL (Uniform Resource Locator) also known as a URI (Uniform Resource Identifier)
+2. **Stateless**: Each request contains all information needed to complete it, as previously "stated" 😀
+3. **Client-Server Architecture**: Separation of concerns between client and server, with the former requesting and the latter responding
+4. **Uniform Interface**: Consistent way to interact with resources, including consistent URL's
+5. **Layered System**: Client cannot tell if it's connected directly to the server, and not some intermediate layer in front of the server like a proxy, or some deeper layer behind it like a database.
+6. **Cacheability**: Responses must define themselves as cacheable or non-cacheable to prevent clients from reusing stale or inappropriate data but allow for more efficient communication 
 
-There are two additional principles called **Code on Demand** (CoD) and **Hypermedia As The Engine Of Application State** (HATEOAS), which are not directly related to our REST examples, but are an aspect of RESTful APIs. CoD allows clients to request and execute code on the server, which is used for example in websites to load JavaScript and create dynamic pages. HATEOAS allows clients to navigate and interact with resources through hyperlinks, which is can be used for dynamic content navigation, although it is more common in HTML than in JSON.
+There are two additional principles called **Code on Demand** (CoD) and **Hypermedia As The Engine Of Application State** (HATEOAS), which are not directly related to our REST examples, but are aspects of REST as a complete concept. CoD allows clients to request and execute code on the server, which is used for example in websites to load JavaScript and create dynamic pages. HATEOAS allows clients to navigate and interact with resources through hyperlinks, which is can be used for dynamic content navigation, although it is more common in HTML than in JSON.
 
 While REST doesn't specify HTTP as the transport mechanism, HTTP is the most common and practical way to implement RESTful APIs. In HTTP REST API's (much acronym 🐶), HTTP methods (POST, GET, PUT / PATCH, DELETE) are used to perform CRUD operations on resources. There are additional methods, like HEAD and OPTIONS, but they are not directly related to our REST examples.
 
@@ -41,7 +41,7 @@ While REST doesn't specify HTTP as the transport mechanism, HTTP is the most com
 
 ## 💻 Node.js and Express
 
-**Node.js** is a JavaScript runtime built on the Chrome Browser's "V8" JavaScript engine. It allows developers to run JavaScript on the server-side, outside of a browser environment. Like the browser Node.js uses an event-driven programming model, and has similar API's to the browser with the addition of Node.js specific APIs for accessing the file system, network, and other server-side capabilities.
+**Node.js** is a JavaScript runtime built on the Chrome Browser's "V8" JavaScript engine. It allows developers to run JavaScript on the server-side, outside of a browser environment. Like the browser Node.js uses an event-driven programming model, and has similar API's to the browser with the subtraction of DOM ( Document Object Model) and other browser specific APIs, and the addition of Node.js specific APIs for accessing the file system, network, and other server-side capabilities.
 
 **Express.js** is a minimal and flexible web application framework for Node.js. It's a library, like React, and like React it provides some basic building blocks for your code, in this case for creating server applications and APIs. It contributes the following features:
 
@@ -107,7 +107,7 @@ This lab consists of two parts:
 1. Navigate to the `express-api` directory
 2. Follow the instructions in `exercise.md` individually
 3. Implement the missing endpoints in the Space Resource API leveraging the documentation and teaching staff to guide your implementation
-4. Test your implementation using the Swagger documentation (which when your server is running is located at [http://localhost:3000/api-docs](http://localhost:3000/api-docs))
+4. Test your implementation using the Swagger documentation (which when your server is running is located at [http://localhost:3000/api-docs](http://localhost:3000/api-docs), or a proxied URL on IDX)
 
 ## ⏰ Time Allocation
 
