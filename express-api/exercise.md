@@ -1,5 +1,7 @@
 # Express.js API Exercise
 
+## Overview
+
 In this exercise, you'll complete a partially built Express.js API for managing fictional space resources. The API follows RESTful principles and includes OpenAPI/Swagger documentation.
 
 ## Prerequisites
