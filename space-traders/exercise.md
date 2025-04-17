@@ -1,7 +1,7 @@
 # SpaceTraders API Exercise (10 minutes)
 
 ## Overview
-In this quick exercise, you'll explore the SpaceTraders API using Postman to understand RESTful API concepts and how to interact with an API over HTTP. You may not finish this exercise in the time alotted. That's ok! There's much more to explore in SpaceTraders than we can cover in this exercise.
+In this quick exercise, we'll explore the SpaceTraders API as a group using Postman to understand RESTful API concepts and how to interact with an API over HTTP. At the end you'll chat in smaller groups about the exercise.
 
 ## Prerequisites
 - [Postman](https://www.postman.com/downloads/) installed or Postman Web
@@ -24,7 +24,7 @@ In this quick exercise, you'll explore the SpaceTraders API using Postman to und
 
 ## Exercise Steps
 
-### Step 1: Register a New Agent (1 minutes)
+### Step 1: Register a New Agent
 1. Open the "Register New Agent" request
 2. In the Authorization tab, select "API Key" as the type
 3. Set the Key to "x-api-key" and the Value to "{{userApiKey}}" (using your environment variable)
@@ -33,7 +33,7 @@ In this quick exercise, you'll explore the SpaceTraders API using Postman to und
 6. From the response, copy your agent token and set it as the `bearerToken` environment variable
    - This agent token is different from your user API key and is specific to this agent
 
-### Step 2: Explore Your Agent (1 minute)
+### Step 2: Explore Your Agent
 1. Find and send the "My Agent Details" request
 2. Note your starting credits and headquarters location
 3. The location should look like this: X1-TF9-A1
@@ -41,7 +41,7 @@ In this quick exercise, you'll explore the SpaceTraders API using Postman to und
    - All three parts comprise the waypoint symbol, or a specific place in a specific system (X1-TF9-A1)
 4. List your ships, and make note of the symbol of your Frigate ship (it should be your agent callsign postfixed by "-1", so "YOUR_CALLSIGN-1")
 
-### Step 3: Purchase Goods at a Marketplace (2 minutes)
+### Step 3: Purchase Goods at a Marketplace
 1. Find a marketplace using the "Get Market" request
    - You'll need to provide a system symbol and waypoint symbol where a market exists
    - Your starting location should have a marketplace (For example, system X1-TF9, waypoint X1-TF9-A1)
@@ -51,7 +51,7 @@ In this quick exercise, you'll explore the SpaceTraders API using Postman to und
    - You'll need to specify your ship symbol in the params section, the trade symbol (type of good, for example JEWELRY), and the number of units in the request body
 4. Verify your cargo by checking your ship's cargo hold
 
-### Step 4: Navigate and Sell for Profit (2 minutes)
+### Step 4: Navigate and Sell for Profit
 1. Orbit your ship, using the appropriate endpoint, to take off from your current location
 2. Use the "Navigate Ship" request to travel to the second marketplace
    - You'll need to specify your ship symbol and the destination waypoint
@@ -79,8 +79,8 @@ In this quick exercise, you'll explore the SpaceTraders API using Postman to und
     - This is a RESTful API, which means it follows the REST principles. Well, mostly, as do most REST APIs.
 - Some actions have cooldown periods, check the ship's status if an action fails
 
-## Group Quiz (2 minutes)
-Discuss some of these questions as a group after completing the exercise:
+## Group Quiz
+Discuss some of these questions in your breakout group after completing the exercise:
 
 1. **REST Principles**: What REST principles did you observe in the SpaceTraders API? How did the API organize resources and use HTTP methods? What endpoints don't seem to follow REST principles?
 

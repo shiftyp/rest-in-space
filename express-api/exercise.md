@@ -9,7 +9,7 @@ In this exercise, you'll complete a partially built Express.js API for managing 
 - Node.js installed (or using the provided IDX environment)
 - Text editor or IDE (or the IDX environment)
 
-## Setup (2 minutes)
+## Setup
 
 1. Navigate to the `express-api` directory in your terminal:
   ```bash
@@ -33,7 +33,7 @@ In this exercise, you'll complete a partially built Express.js API for managing 
 5. Visit http://localhost:3000/api-docs (Or the proxied URL from IDX) to see the API documentation
   This is a Swagger UI that automatically documents your API based on the OpenAPI specification.
 
-## Your Task (8 minutes)
+## Your Task
 
 ### Understanding the Project Structure
 

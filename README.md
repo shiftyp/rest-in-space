@@ -100,7 +100,7 @@ This lab consists of two parts:
 
 1. Navigate to the `space-traders` directory
 2. Follow the instructions in `exercise.md`
-3. Complete the exercise individually and final "quiz" in assigned groups
+3. We'll complete the exercise as a group, and final "quiz" in assigned breakout groups
 
 ### Part 2: Express.js API Implementation
 
@@ -111,8 +111,8 @@ This lab consists of two parts:
 
 ## ⏰ Time Allocation
 
-- SpaceTraders API Exercise: 10 minutes
-- Express.js API Implementation: 10 minutes
+- SpaceTraders API Exercise: 8 minutes
+- Express.js API Implementation: 12 minutes
 - Total lab time: 20 minutes
 
 ## 📓 Resources
