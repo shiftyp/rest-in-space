@@ -9,9 +9,5 @@
 
     # Set some permissions
     chmod -R +w "$out"
-
-    # Remove the template files themselves and any connection to the template's
-    # Git repository
-    rm -rf "$out/idx-template".{nix,json}
   '';
 }
