@@ -148,8 +148,24 @@ router.put('/:id', (req, res) => {
 After you've implemented the endpoints, you can check your answers by comparing your implementation with the provided answers in the `answers` branch
 
 ```bash
-git diff origin/answers
+# if in the express directory
+cd ..
+git init
+git add .
+git commit -m "checking answers"
+git remote add origin https://github.com/shiftyp/rest-in-space.git
+git fetch origin
+git diff origin/answer -- src/routes/resources.js
 ```
 
-If you see any differences, you can fix them and repeat the process until your implementation matches the answers.
+If you see any differences, you can fix them and repeat the process until your implementation matches the answers. Once you've completed the above steps, you can also check out the answers branch to see the completed implementation:
+
+```bash
+git checkout answer
+```
+
+
+
+</ADDITIONAL_METADATA>
+
 
