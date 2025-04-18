@@ -92,7 +92,7 @@ After you've implemented the endpoints, you can check your answers by looking at
 cd .. # if in the express directory
 git remote add origin https://github.com/shiftyp/rest-in-space.git
 git fetch origin
-git diff origin/answer -- src/routes/resources.js
+git diff HEAD origin/answer -- src/routes/resources.js
 ```
 
 If you see any differences, you can fix them and repeat the process until your implementation matches the answers. Once you've completed the above steps, you can also check out the answers branch to see the completed implementation:
