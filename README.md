@@ -2,6 +2,17 @@
 
 Welcome to the REST API Lab! This hands-on exercise will introduce you to RESTful API concepts and Express.js, a Node.js framework for building web applications and APIs.
 
+## 🔰 Who this lab is for
+
+This lab will be easier to attempt if you have some experience with the following:
+
+- **Required:** Programming in JavaScript; doesn't need to be advanced but we'll be programming with it
+- **Required:** Running terminal commands (bash); we'll be runnning commands using the terminal
+- **Optional:** Version control wtih `git`; does anyone _really_ know git? :smile: The git commands are shown, so you can follow along!
+- **Optional:** Reading / writing JSON (JavaScript Object Notation); we'll be reading it, but if you know JavaScript you'll pick it up
+- **Optional:** Frontend API Integration with `fetch`; not part of this lab, but good to know APIs from the client side
+
+
 ## 🔎 Overview
 
 This lab consists of three parts:
@@ -24,7 +35,6 @@ This lab consists of three parts:
 - A Google account with Firebase Studio enabled
 - [A clone of this repository in Firebase Studio](https://studio.firebase.google.com/new?template=https:%2F%2Fgithub.com%2Fshiftyp%2Frest-in-space)
 - Node.js installed (or using the provided Firebase Studio environment)
-- Basic JavaScript knowledge
 - Swagger UI (included in the project)
 - A SpaceTraders.io account (you'll create this during the lab)
 
