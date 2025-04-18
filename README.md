@@ -21,6 +21,8 @@ This lab consists of three parts:
 
 ## 📝 Prerequisites
 
+- A Google account with Firebase Studio enabled
+- [A clone of this repository in Firebase Studio](https://studio.firebase.google.com/new?template=https:%2F%2Fgithub.com%2Fshiftyp%2Frest-in-space)
 - Node.js installed (or using the provided Firebase Studio environment)
 - Basic JavaScript knowledge
 - Swagger UI (included in the project)
