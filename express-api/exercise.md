@@ -70,6 +70,8 @@ After implementing each route / endpoint, you can test it using Swagger UI:
 - Click on an endpoint, then click the "Try it out" button
 - Fill in any required parameters and click "Execute"
 
+## Time for the exercise!
+
 Open the file `src/routes/resources.js` and implement the endpoints according to the following GitHub issues! After each endpoint, stage and commit your changes like so:
 
 ```
