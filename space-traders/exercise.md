@@ -65,7 +65,7 @@ In this quick exercise, we'll explore the SpaceTraders API as a group using Post
    - NOTE: You'll need to specify your ship symbol, the trade symbol, and the number of units
 6. Check your updated credit balance using the "My Agent Details" request
 
-## Group Quiz
+## Group Questions
 Discuss some of these questions in your breakout group after completing the exercise:
 
 1. **REST Principles**: What REST principles did you observe in the SpaceTraders API? How did the API organize resources and use HTTP methods? What endpoints don't seem to follow REST principles?
