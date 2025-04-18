@@ -32,7 +32,7 @@ This lab consists of three parts:
 
 ## 📝 Prerequisites
 
-- A Google account with Firebase Studio enabled
+- A Google account with Firebase Studio enabled (this project can also be set up locally, although this isn't documented here)
 - [A clone of this repository in Firebase Studio](https://studio.firebase.google.com/new?template=https:%2F%2Fgithub.com%2Fshiftyp%2Frest-in-space)
 - A SpaceTraders.io account (you'll create this during the lab)
 
