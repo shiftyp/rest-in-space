@@ -175,9 +175,9 @@ Security is a critical aspect of API design. Unless you're creating an API that'
 
 Authentication is the process of verifying who a user is. In the context of APIs, it's about confirming the identity of the client making requests. Common authentication methods include:
 
-- **API Keys**: Simple string tokens included in request headers (e.g., `X-API-Key: abc123`)
-- **Bearer Tokens**: Often implemented as JSON Web Tokens (JWT), included in the Authorization header
-- **Basic Auth**: Username and password encoded in Base64, sent in the Authorization header
+- **API Keys**: Simple opaque string tokens included in request headers (e.g., `X-API-Key: abc123`)
+- **Bearer Tokens**: More complex strings that include data, often implemented as JSON Web Tokens (JWT), cryptographically signed and included in the Authorization header
+- **Basic Auth**: Username and password encoded (not encrypted) in Base64, sent in the Authorization header
 - **OAuth 2.0**: A protocol for authorization that enables third-party applications to access resources without sharing credentials
 
 In Express.js, authentication is typically implemented as middleware that checks credentials before allowing the request to proceed to route handlers.
