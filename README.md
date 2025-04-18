@@ -34,8 +34,6 @@ This lab consists of three parts:
 
 - A Google account with Firebase Studio enabled
 - [A clone of this repository in Firebase Studio](https://studio.firebase.google.com/new?template=https:%2F%2Fgithub.com%2Fshiftyp%2Frest-in-space)
-- Node.js installed (or using the provided Firebase Studio environment)
-- Swagger UI (included in the project)
 - A SpaceTraders.io account (you'll create this during the lab)
 
 ## 🧑🏾‍🚀 Getting Started
