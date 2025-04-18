@@ -36,6 +36,13 @@ In this exercise, you'll complete a partially built Express.js API for managing 
   ```
   This runs the script defined in package.json, which starts the Express server.
 
+4. Initialize the git repository:
+  ```
+  git init
+  git add .
+  git commit -m "initial commit :rocket:"
+  ```
+
 4. Visit http://localhost:3000 (Or the proxied URL from Firebase Studio) in your browser to see the welcome message
 
 5. Visit http://localhost:3000/api-docs (Or the proxied URL from Firebase Studio) to see the API documentation
@@ -80,7 +87,7 @@ After implementing each route / endpoint, you can test it using (in order of eas
       -d '{"name":"Cosmicite","rarity":"Uncommon","value":3000}'
     ```
 
-Open the file `src/routes/resources.js` and implement the following endpoints:
+Open the file `src/routes/resources.js` and implement the endpoints!
 
 ### 1. GET all resources
 
