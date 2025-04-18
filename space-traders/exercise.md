@@ -1,4 +1,4 @@
-# SpaceTraders API Exercise (10 minutes)
+# SpaceTraders API Exercise
 
 ## Overview
 In this quick exercise, we'll explore the SpaceTraders API as a group using Swagger UI to understand RESTful API concepts and how to interact with an API over HTTP. At the end you'll chat in smaller groups about the exercise.
