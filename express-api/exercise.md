@@ -87,79 +87,24 @@ After implementing each route / endpoint, you can test it using (in order of eas
       -d '{"name":"Cosmicite","rarity":"Uncommon","value":3000}'
     ```
 
-Open the file `src/routes/resources.js` and implement the endpoints!
+Open the file `src/routes/resources.js` and implement the endpoints according to the following GitHub issues! After each endpoint, stage and commit your changes like so:
 
-### 1. GET all resources
-
-Implement the endpoint to return all resources in the collection. In Express, the `res.json()` method automatically sets the Content-Type header to application/json and converts the JavaScript object to JSON format.
-
-```javascript
-// GET all resources
-router.get('/', (req, res) => {
-  // TODO: Return all resources as JSON
-});
+```
+git add src/routes/resources.js
+git commit -m "Completed issue #1 :astronaut:"
 ```
 
-### 2. GET a specific resource by ID
+1. [GET all resources](https://github.com/shiftyp/rest-in-space/issues/1)
+2. [GET a specific resource by ID](https://github.com/shiftyp/rest-in-space/issues/2)
+3. [POST a new resource](https://github.com/shiftyp/rest-in-space/issues/3)
+4. [PUT to update a resource](https://github.com/shiftyp/rest-in-space/issues/4)
 
-Implement the endpoint to return a specific resource by its ID. Return a 404 error if the resource doesn't exist.
-
-In Express, route parameters are named URL segments used to capture values at specific positions in the URL. The captured values are stored in the `req.params` object.
-
-```javascript
-// GET a specific resource by ID
-router.get('/:id', (req, res) => {
-  // TODO: Find the resource by ID
-  // TODO: Return 404 if not found
-  // TODO: Return the resource as JSON if found
-});
-```
-
-### 3. POST a new resource
-
-Implement the endpoint to create a new resource. Validate that required fields are present.
-
-In Express, the `req.body` object contains the data submitted in the request body. This is available because we've added the `express.json()` middleware in app.js, which parses incoming JSON requests.
-
-```javascript
-// POST a new resource
-router.post('/', (req, res) => {
-  // TODO: Extract data from request body
-  // TODO: Validate required fields (name, rarity, value)
-  // TODO: Create a new resource with a unique ID
-  // TODO: Add to resources array
-  // TODO: Return the new resource with 201 status code
-  // Note: 201 is the HTTP status code for "Created"
-});
-```
-
-### 4. PUT (update) a resource
-
-Implement the endpoint to update an existing resource. Return a 404 error if the resource doesn't exist.
-
-The PUT method is used to update an existing resource. In RESTful APIs, PUT typically replaces the entire resource with the new representation, while PATCH (not implemented here) would partially update a resource.
-
-```javascript
-// PUT (update) a resource
-router.put('/:id', (req, res) => {
-  // TODO: Find the resource by ID
-  // TODO: Return 404 if not found
-  // TODO: Update the resource with new values
-  // TODO: Return the updated resource
-});
-```
-
-
-### 5. Check your answers!
+### Check your answers!
 
 After you've implemented the endpoints, you can check your answers by comparing your implementation with the provided answers in the `answers` branch
 
 ```bash
-# if in the express directory
-cd ..
-git init
-git add .
-git commit -m "checking answers"
+cd .. # if in the express directory
 git remote add origin https://github.com/shiftyp/rest-in-space.git
 git fetch origin
 git diff origin/answer -- src/routes/resources.js
@@ -170,9 +115,5 @@ If you see any differences, you can fix them and repeat the process until your i
 ```bash
 git checkout answer
 ```
-
-
-
-</ADDITIONAL_METADATA>
 
 
