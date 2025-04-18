@@ -20,7 +20,7 @@ This lab consists of three parts:
 
 2. **SpaceTraders API Exploration**: Working as a group to interact with a real-world RESTful API using Swagger UI to understand API design principles, authentication, and resource manipulation.
 
-3. **Express.js API Implementation**: Working individually Complete a partially built Express.js API for managing fictional space resources, implementing three core REST operations (GET, POST, PUT).
+3. **Express.js API Implementation**: Working individually to complete a partially built Express.js API for managing fictional space resources, implementing three core REST operations (GET, POST, PUT).
 
 ## 📖 Learning Objectives
 
