@@ -86,7 +86,7 @@ git commit -m "Completed issue #1 :astronaut:"
 
 ### Checkout (pun intended :smile:) your answers!
 
-After you've implemented the endpoints, you can check your answers by comparing your implementation with the provided answers in the `answers` branch
+After you've implemented the endpoints, you can check your answers by looking at this ["Pull Request"](https://github.com/shiftyp/rest-in-space/pull/5) (a chance to review code before merging) comparing your implementation with the provided answers in the `answers` branch
 
 ```bash
 cd .. # if in the express directory
