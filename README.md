@@ -34,7 +34,7 @@ This lab consists of three parts:
 
 1. Navigate to the `space-traders` directory
 2. Follow the instructions in `exercise.md`
-3. We'll complete the exercise as a group, and final "quiz" in assigned breakout groups
+3. We'll complete the exercise as a group, and the discussion questions in assigned breakout groups
 
 ### Part 2: Express.js API Implementation
 
