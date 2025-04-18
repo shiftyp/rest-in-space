@@ -6,7 +6,6 @@
     # project folder for the new workspace. ${./.} inserts the directory
     # of the checked-out Git folder containing this template.
     cp -rf ${./.} "$out"
-    cp -rf .git "$out/.git"
 
     # Set some permissions
     chmod -R +w "$out"
