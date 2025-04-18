@@ -38,7 +38,7 @@ In this quick exercise, we'll explore the SpaceTraders API as a group using Swag
   ```
   This runs the script defined in package.json, which starts the Express server.
 
-4. Visit http://localhost:3001 (Or the proxied URL from IDX) in your browser to see the welcome message
+4. Visit http://localhost:3001 (Or the proxied URL from Firebase Studio) in your browser to see the welcome message
 5. Open the Swagger UI interface in your browser
 6. Authorize with your API token by clicking the 'Authorize' button
 7. Enter your Account Token into the appropriate field

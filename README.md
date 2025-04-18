@@ -21,7 +21,7 @@ This lab consists of three parts:
 
 ## 📝 Prerequisites
 
-- Node.js installed (or using the provided IDX environment)
+- Node.js installed (or using the provided Firebase Studio environment)
 - Basic JavaScript knowledge
 - Swagger UI (included in the project)
 - A SpaceTraders.io account (you'll create this during the lab)
@@ -39,7 +39,7 @@ This lab consists of three parts:
 1. Navigate to the `express-api` directory
 2. Follow the instructions in `exercise.md` individually
 3. Implement the missing endpoints in the Space Resource API leveraging the documentation and teaching staff to guide your implementation
-4. Test your implementation using the Swagger documentation (which when your server is running is located at [http://localhost:3000/api-docs](http://localhost:3000/api-docs), or a proxied URL on IDX)
+4. Test your implementation using the Swagger documentation (which when your server is running is located at [http://localhost:3000/api-docs](http://localhost:3000/api-docs), or a proxied URL on Firebase Studio)
 
 ## ⏰ Time Allocation
 

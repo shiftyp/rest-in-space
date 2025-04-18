@@ -13,8 +13,8 @@ In this exercise, you'll complete a partially built Express.js API for managing 
 
 ## Prerequisites
 
-- Node.js installed (or using the provided IDX environment)
-- Text editor or IDE (or the IDX environment)
+- Node.js installed (or using the provided Firebase Studio environment)
+- Text editor or IDE (or the Firebase Studio environment)
 - Swagger UI is included in the project for testing the API
 
 ## Setup
@@ -36,9 +36,9 @@ In this exercise, you'll complete a partially built Express.js API for managing 
   ```
   This runs the script defined in package.json, which starts the Express server.
 
-4. Visit http://localhost:3000 (Or the proxied URL from IDX) in your browser to see the welcome message
+4. Visit http://localhost:3000 (Or the proxied URL from Firebase Studio) in your browser to see the welcome message
 
-5. Visit http://localhost:3000/api-docs (Or the proxied URL from IDX) to see the API documentation
+5. Visit http://localhost:3000/api-docs (Or the proxied URL from Firebase Studio) to see the API documentation
   This is a Swagger UI that automatically documents your API based on the OpenAPI specification.
 
 ## Your Task
@@ -58,17 +58,17 @@ Express uses the concept of **routes** to determine how an application responds 
 
 After implementing each route / endpoint, you can test it using (in order of ease of use):
 
-1. **The Swagger UI** at http://localhost:3000/api-docs (or the proxied URL with IDX)
+1. **The Swagger UI** at http://localhost:3000/api-docs (or the proxied URL with Firebase Studio)
   - This interactive documentation allows you to try out your API endpoints directly in the browser
   - Click on an endpoint, then click the "Try it out" button
   - Fill in any required parameters and click "Execute"
 
 2. **Curl commands** or another API client
-  - Be sure to use localhost:3000 as the hostname, or the proxied URL if using a web environment like Project IDX
+  - Be sure to use localhost:3000 as the hostname, or the proxied URL if using a web environment like Firebase Studio
 
 3. **Additional curl commands** from the terminal
-  - If using IDX or a local environment, localhost will work from an IDX or local terminal
-  - If using local CURL with IDX, use the proxied url
+  - If using Firebase Studio or a local environment, localhost will work from a Firebase Studio or local terminal
+  - If using local CURL with Firebase Studio, use the proxied url
   - For example, to get all resources:
     ```bash 
     curl http://localhost:3000/api/resources
