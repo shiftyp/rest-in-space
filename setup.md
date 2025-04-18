@@ -78,7 +78,7 @@ Sometimes you need operations that don't fit neatly into CRUD. For example, you 
 
 ### 📤 Request Structure
 
-Requests to REST apis consist of a URL, HTTP method, and optional headers and body. The URL is the endpoint of the API resource or collection, the HTTP method is the action to perform, and the headers and body. The body is optional, and is used for requests that need to send data to the server. If we were to look at the structure of an HTTP request to create a book in a simplified JSON format, it might look like this:
+Requests to REST apis consist of a URL, HTTP method, and optional headers and body. The URL is the endpoint of the API resource or collection, the HTTP method is the action to perform, and the headers contain configuration for communication, and the body contains the representation of the state being transferred. The body is optional, and is used for requests that need to send data to the server. If we were to look at the structure of an HTTP request to create a book in a simplified JSON format, it might look like this:
 
 ```json
 {
