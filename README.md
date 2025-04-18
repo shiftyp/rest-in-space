@@ -7,7 +7,7 @@ Welcome to the REST API Lab! This hands-on exercise will introduce you to RESTfu
 This lab consists of three parts:
 1. **API, Node.js, Express.js Overview**: A [quick overview](setup.md) of the concepts and technologies we'll use in this lab.
 
-1. **SpaceTraders API Exploration**: Interact with a real-world RESTful API using Postman to understand API design principles, authentication, and resource manipulation.
+2. **SpaceTraders API Exploration**: Interact with a real-world RESTful API using Postman to understand API design principles, authentication, and resource manipulation.
 
 2. **Express.js API Implementation**: Complete a partially built Express.js API for managing fictional space resources, implementing three core REST operations (GET, POST, PUT).
 
