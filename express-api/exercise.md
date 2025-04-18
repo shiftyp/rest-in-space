@@ -15,7 +15,7 @@ In this exercise, you'll complete a partially built Express.js API for managing 
 
 - Node.js installed (or using the provided IDX environment)
 - Text editor or IDE (or the IDX environment)
-- Optional: Postman VSCode Plugin (installed in IDX environment) to test the API
+- Swagger UI is included in the project for testing the API
 
 ## Setup
 
@@ -32,7 +32,7 @@ In this exercise, you'll complete a partially built Express.js API for managing 
 
 3. Start the server:
   ```bash
-  npm start
+  npm dev
   ```
   This runs the script defined in package.json, which starts the Express server.
 
@@ -50,8 +50,7 @@ Before you start coding, let's understand the project structure:
 - `server.js`: The entry point that starts the Express server
 - `src/app.js`: Configures the Express application with middleware and routes
 - `src/routes/resources.js`: Contains the route handlers for our API endpoints (this is where you'll work)
-- `docs/openapi.yaml`: The OpenAPI specification that documents the API
-- `postman/express-postman.json`: A Postman collection for testing the API
+- `docs/openapi.yaml`: The OpenAPI specification used by Swagger UI for documenting and testing the API
 
 Express uses the concept of **routes** to determine how an application responds to client requests to specific endpoints (URIs) with specific HTTP methods (GET, POST, etc.).
 
@@ -64,11 +63,10 @@ After implementing each route / endpoint, you can test it using (in order of eas
   - Click on an endpoint, then click the "Try it out" button
   - Fill in any required parameters and click "Execute"
 
-2. **Postman** or another API client
+2. **Curl commands** or another API client
   - Be sure to use localhost:3000 as the hostname, or the proxied URL if using a web environment like Project IDX
-  - The web based Postman interface will not work with localhost urls
 
-3. **curl commands** from the terminal
+3. **Additional curl commands** from the terminal
   - If using IDX or a local environment, localhost will work from an IDX or local terminal
   - If using local CURL with IDX, use the proxied url
   - For example, to get all resources:

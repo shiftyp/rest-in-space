@@ -1,7 +1,7 @@
 # SpaceTraders API Exercise (10 minutes)
 
 ## Overview
-In this quick exercise, we'll explore the SpaceTraders API as a group using Postman to understand RESTful API concepts and how to interact with an API over HTTP. At the end you'll chat in smaller groups about the exercise.
+In this quick exercise, we'll explore the SpaceTraders API as a group using Swagger UI to understand RESTful API concepts and how to interact with an API over HTTP. At the end you'll chat in smaller groups about the exercise.
 
 ## Learning Objectives
 - Understand RESTful API structure and authentication
@@ -10,33 +10,46 @@ In this quick exercise, we'll explore the SpaceTraders API as a group using Post
 - Observe how API responses contain links to related resources
 
 ## Prerequisites
-- The Postman VSCode plugin (installed in IDX), [Postman](https://www.postman.com/downloads/) installed, or Postman Web
+- Swagger UI (included in the project)
 - SpaceTraders.io account (we'll create this in the setup)
 
 ## Setup (2 minutes)
 
 ### Register for SpaceTraders.io
 1. Visit [my.spacetraders.io](https://my.spacetraders.io) and create an account
-2. After registering, navigate "Settings", and generate a new account token, giving it a name such as "postman"
-3. Copy the token and set it as the `userApiKey` environment variable in Postman
+2. After registering, navigate "Settings", and generate a new account token, giving it a name such as "swagger"
+3. Copy the token to use with Swagger UI
 
-### Set Up Postman
-1. Open Postman
-2. Import the collection by clicking "Import" and selecting the `postman/space-traders-postman.json` file
-3. Create a new environment in Postman with the following variables:
-   - `bearerToken`: (leave empty for now)
-   - `userApiKey`: (paste your user-level API key here)
-4. Be sure to save your environment when making changes
+### Set Up Swagger UI
+1. Navigate to the `space-traders` directory in your terminal:
+  ```bash
+  cd space-traders
+  ```
+
+2. Install dependencies using npm (Node Package Manager):
+  ```bash
+  npm install
+  ```
+  This command reads the package.json file and installs all required libraries.
+
+3. Start the server:
+  ```bash
+  npm start
+  ```
+  This runs the script defined in package.json, which starts the Express server.
+
+4. Visit http://localhost:3001 (Or the proxied URL from IDX) in your browser to see the welcome message
+5. Open the Swagger UI interface in your browser
+6. Authorize with your API token by clicking the 'Authorize' button
+7. Enter your Account Token into the appropriate field
 
 ## Our Task
 
 ### Step 1: Register a New Agent
 1. Open the "Register New Agent" request
-2. In the Authorization tab, select "API Key" as the type
-3. Set the Key to "x-api-key" and the Value to "{{userApiKey}}" (using your environment variable)
-4. In the request body, replace the symbol with a unique name (e.g., `"symbol": "YOUR_CALLSIGN"`) and input a faction of `COSMIC`
-5. Send the request
-6. From the response, copy your agent token and set it as the `bearerToken` environment variable
+2. In the request body, replace the symbol with a unique name (e.g., `"symbol": "YOUR_CALLSIGN"`) and input a faction of `COSMIC`
+3. Send the request
+4. From the response, copy your agent token and set it as the AgentToken under Authorization
    - Note: This agent token is different from your user API key and is specific to this agent
 
 ### Step 2: Explore Your Agent
