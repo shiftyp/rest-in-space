@@ -10,7 +10,7 @@ In this quick exercise, we'll explore the SpaceTraders API as a group using Post
 - Observe how API responses contain links to related resources
 
 ## Prerequisites
-- [Postman](https://www.postman.com/downloads/) installed or Postman Web
+- The Postman VSCode plugin (installed in IDX), [Postman](https://www.postman.com/downloads/) installed, or Postman Web
 - SpaceTraders.io account (we'll create this in the setup)
 
 ## Setup (2 minutes)
@@ -22,7 +22,7 @@ In this quick exercise, we'll explore the SpaceTraders API as a group using Post
 
 ### Set Up Postman
 1. Open Postman
-2. Import the collection by clicking "Import" and selecting the `space-traders-postman.json` file
+2. Import the collection by clicking "Import" and selecting the `postman/space-traders-postman.json` file
 3. Create a new environment in Postman with the following variables:
    - `bearerToken`: (leave empty for now)
    - `userApiKey`: (paste your user-level API key here)

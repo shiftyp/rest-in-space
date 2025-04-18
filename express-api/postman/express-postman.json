@@ -1,0 +1,526 @@
+{
+    "item": [
+        {
+            "id": "29b1425d-e60f-44fa-9d1d-a1577d0fa7b8",
+            "name": "Get all resources",
+            "request": {
+                "name": "Get all resources",
+                "description": {
+                    "content": "Returns a list of all space resources",
+                    "type": "text/plain"
+                },
+                "url": {
+                    "path": [
+                        "api",
+                        "resources"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                },
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "method": "GET",
+                "body": {},
+                "auth": null
+            },
+            "response": [
+                {
+                    "id": "5e6aec49-c591-4e5d-a48f-e9d33e685a2b",
+                    "name": "A list of space resources",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "api",
+                                "resources"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "[\n  {\n    \"id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"rarity\": \"Legendary\",\n    \"value\": \"<number>\",\n    \"description\": \"<string>\",\n    \"origin\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"name\": \"<string>\",\n    \"rarity\": \"Legendary\",\n    \"value\": \"<number>\",\n    \"description\": \"<string>\",\n    \"origin\": \"<string>\"\n  }\n]",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                }
+            ],
+            "event": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "id": "45f87017-3d1b-4a7b-a268-23e24f77d93f",
+            "name": "Create a new resource",
+            "request": {
+                "name": "Create a new resource",
+                "description": {
+                    "content": "Adds a new space resource to the collection",
+                    "type": "text/plain"
+                },
+                "url": {
+                    "path": [
+                        "api",
+                        "resources"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": []
+                },
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "method": "POST",
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"<string>\",\n  \"rarity\": \"Legendary\",\n  \"value\": \"<number>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\"\n}",
+                    "options": {
+                        "raw": {
+                            "headerFamily": "json",
+                            "language": "json"
+                        }
+                    }
+                },
+                "auth": null
+            },
+            "response": [
+                {
+                    "id": "9a897aca-a2d3-4263-aba9-731ebe2e34ad",
+                    "name": "Resource created successfully",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "api",
+                                "resources"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"<string>\",\n  \"rarity\": \"Legendary\",\n  \"value\": \"<number>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\"\n}",
+                            "options": {
+                                "raw": {
+                                    "headerFamily": "json",
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "status": "Created",
+                    "code": 201,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"rarity\": \"Legendary\",\n  \"value\": \"<number>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                },
+                {
+                    "id": "3ae1ce06-ea6a-4a29-bebb-ba1e6e06bed2",
+                    "name": "Invalid input",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "api",
+                                "resources"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "POST",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"<string>\",\n  \"rarity\": \"Legendary\",\n  \"value\": \"<number>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\"\n}",
+                            "options": {
+                                "raw": {
+                                    "headerFamily": "json",
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "status": "Bad Request",
+                    "code": 400,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                }
+            ],
+            "event": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "id": "80b4142d-a370-4129-ae0b-79e5b3508bfc",
+            "name": "Get a specific resource",
+            "request": {
+                "name": "Get a specific resource",
+                "description": {
+                    "content": "Returns details of a specific space resource",
+                    "type": "text/plain"
+                },
+                "url": {
+                    "path": [
+                        "api",
+                        "resources",
+                        ":id"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                        {
+                            "type": "any",
+                            "value": "<string>",
+                            "key": "id",
+                            "disabled": false,
+                            "description": {
+                                "content": "(Required) ID of the resource to retrieve",
+                                "type": "text/plain"
+                            }
+                        }
+                    ]
+                },
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "method": "GET",
+                "body": {},
+                "auth": null
+            },
+            "response": [
+                {
+                    "id": "e24d4165-470f-4d25-806a-fd71c2725138",
+                    "name": "Resource details",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "api",
+                                "resources",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"rarity\": \"Legendary\",\n  \"value\": \"<number>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                },
+                {
+                    "id": "b3bb4cd9-3f5f-4682-9130-9edb2d425909",
+                    "name": "Resource not found",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "api",
+                                "resources",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                    },
+                    "status": "Not Found",
+                    "code": 404,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                }
+            ],
+            "event": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        },
+        {
+            "id": "488a888e-2603-4bf7-9c97-0801efb1cc66",
+            "name": "Update a resource",
+            "request": {
+                "name": "Update a resource",
+                "description": {
+                    "content": "Updates an existing space resource",
+                    "type": "text/plain"
+                },
+                "url": {
+                    "path": [
+                        "api",
+                        "resources",
+                        ":id"
+                    ],
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "query": [],
+                    "variable": [
+                        {
+                            "type": "any",
+                            "value": "<string>",
+                            "key": "id",
+                            "disabled": false,
+                            "description": {
+                                "content": "(Required) ID of the resource to update",
+                                "type": "text/plain"
+                            }
+                        }
+                    ]
+                },
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "method": "PUT",
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"<string>\",\n  \"rarity\": \"Uncommon\",\n  \"value\": \"<number>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\"\n}",
+                    "options": {
+                        "raw": {
+                            "headerFamily": "json",
+                            "language": "json"
+                        }
+                    }
+                },
+                "auth": null
+            },
+            "response": [
+                {
+                    "id": "b52e7578-9446-4cb7-b5bf-85254ee055fe",
+                    "name": "Resource updated successfully",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "api",
+                                "resources",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "PUT",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"<string>\",\n  \"rarity\": \"Uncommon\",\n  \"value\": \"<number>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\"\n}",
+                            "options": {
+                                "raw": {
+                                    "headerFamily": "json",
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"rarity\": \"Legendary\",\n  \"value\": \"<number>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                },
+                {
+                    "id": "7853d6df-73ca-4f3e-bf98-92ef38e7de8b",
+                    "name": "Resource not found",
+                    "originalRequest": {
+                        "url": {
+                            "path": [
+                                "api",
+                                "resources",
+                                ":id"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [],
+                            "variable": []
+                        },
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "method": "PUT",
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"<string>\",\n  \"rarity\": \"Uncommon\",\n  \"value\": \"<number>\",\n  \"description\": \"<string>\",\n  \"origin\": \"<string>\"\n}",
+                            "options": {
+                                "raw": {
+                                    "headerFamily": "json",
+                                    "language": "json"
+                                }
+                            }
+                        }
+                    },
+                    "status": "Not Found",
+                    "code": 404,
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "body": "{\n  \"error\": \"<string>\",\n  \"message\": \"<string>\"\n}",
+                    "cookie": [],
+                    "_postman_previewlanguage": "json"
+                }
+            ],
+            "event": [],
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            }
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:3000"
+        }
+    ],
+    "info": {
+        "_postman_id": "f31aacb7-df4c-4e51-b2e0-26c9948b096e",
+        "name": "Space Resource API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "A simple API for managing fictional space resources",
+            "type": "text/plain"
+        }
+    }
+}

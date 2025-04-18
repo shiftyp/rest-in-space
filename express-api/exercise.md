@@ -15,6 +15,7 @@ In this exercise, you'll complete a partially built Express.js API for managing 
 
 - Node.js installed (or using the provided IDX environment)
 - Text editor or IDE (or the IDX environment)
+- Optional: Postman VSCode Plugin (installed in IDX environment) to test the API
 
 ## Setup
 
@@ -50,8 +51,36 @@ Before you start coding, let's understand the project structure:
 - `src/app.js`: Configures the Express application with middleware and routes
 - `src/routes/resources.js`: Contains the route handlers for our API endpoints (this is where you'll work)
 - `docs/openapi.yaml`: The OpenAPI specification that documents the API
+- `postman/express-postman.json`: A Postman collection for testing the API
 
 Express uses the concept of **routes** to determine how an application responds to client requests to specific endpoints (URIs) with specific HTTP methods (GET, POST, etc.).
+
+## Testing Your Implementation
+
+After implementing each route / endpoint, you can test it using (in order of ease of use):
+
+1. **The Swagger UI** at http://localhost:3000/api-docs (or the proxied URL with IDX)
+  - This interactive documentation allows you to try out your API endpoints directly in the browser
+  - Click on an endpoint, then click the "Try it out" button
+  - Fill in any required parameters and click "Execute"
+
+2. **Postman** or another API client
+  - Be sure to use localhost:3000 as the hostname, or the proxied URL if using a web environment like Project IDX
+  - The web based Postman interface will not work with localhost urls
+
+3. **curl commands** from the terminal
+  - If using IDX or a local environment, localhost will work from an IDX or local terminal
+  - If using local CURL with IDX, use the proxied url
+  - For example, to get all resources:
+    ```bash 
+    curl http://localhost:3000/api/resources
+    ```
+  - To create a new resource:
+    ```bash
+    curl -X POST http://localhost:3000/api/resources \
+      -H "Content-Type: application/json" \
+      -d '{"name":"Cosmicite","rarity":"Uncommon","value":3000}'
+    ```
 
 Open the file `src/routes/resources.js` and implement the following endpoints:
 
@@ -114,30 +143,3 @@ router.put('/:id', (req, res) => {
   // TODO: Return the updated resource
 });
 ```
-
-## Testing Your Implementation
-
-After implementing each endpoint, you can test it using (in order of ease of use):
-
-1. **The Swagger UI** at http://localhost:3000/api-docs
-  - This interactive documentation allows you to try out your API endpoints directly in the browser
-  - Click on an endpoint, then click the "Try it out" button
-  - Fill in any required parameters and click "Execute"
-
-2. **Postman** or another API client
-  - Be sure to use localhost:3000 as the hostname, or the proxied URL if using a web environment like Project IDX
-  - The web based postman interface will not work with localhost urls
-
-3. **curl commands** from the terminal
-  - If using IDX or a local environment, locahost will work from an IDX or local terminal
-  - If using local CURL with IDX, use the proxied url
-  - For example, to get all resources:
-    ```bash 
-    curl http://localhost:3000/api/resources
-    ```
-  - To create a new resource:
-    ```bash
-    curl -X POST http://localhost:3000/api/resources \
-      -H "Content-Type: application/json" \
-      -d '{"name":"Cosmicite","rarity":"Uncommon","value":3000}'
-    ```
