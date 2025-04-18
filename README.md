@@ -1,4 +1,4 @@
-# 🚀 REST API Lab
+# 🚀 REST in Space: API Lab
 
 Welcome to the REST API Lab! This hands-on exercise will introduce you to RESTful API concepts and Express.js, a Node.js framework for building web applications and APIs.
 
