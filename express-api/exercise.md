@@ -63,29 +63,12 @@ Express uses the concept of **routes** to determine how an application responds 
 
 ## Testing Your Implementation
 
-After implementing each route / endpoint, you can test it using (in order of ease of use):
+After implementing each route / endpoint, you can test it using Swagger UI:
 
-1. **The Swagger UI** at http://localhost:3000/api-docs (or the proxied URL with Firebase Studio)
-  - This interactive documentation allows you to try out your API endpoints directly in the browser
-  - Click on an endpoint, then click the "Try it out" button
-  - Fill in any required parameters and click "Execute"
-
-2. **Curl commands** or another API client
-  - Be sure to use localhost:3000 as the hostname, or the proxied URL if using a web environment like Firebase Studio
-
-3. **Additional curl commands** from the terminal
-  - If using Firebase Studio or a local environment, localhost will work from a Firebase Studio or local terminal
-  - If using local CURL with Firebase Studio, use the proxied url
-  - For example, to get all resources:
-    ```bash 
-    curl http://localhost:3000/api/resources
-    ```
-  - To create a new resource:
-    ```bash
-    curl -X POST http://localhost:3000/api/resources \
-      -H "Content-Type: application/json" \
-      -d '{"name":"Cosmicite","rarity":"Uncommon","value":3000}'
-    ```
+- Navigate to the Swagger UI at http://localhost:3000/api-docs (or the proxied URL with Firebase Studio)
+- This interactive documentation allows you to try out your API endpoints directly in the browser
+- Click on an endpoint, then click the "Try it out" button
+- Fill in any required parameters and click "Execute"
 
 Open the file `src/routes/resources.js` and implement the endpoints according to the following GitHub issues! After each endpoint, stage and commit your changes like so:
 
@@ -99,7 +82,7 @@ git commit -m "Completed issue #1 :astronaut:"
 3. [POST a new resource](https://github.com/shiftyp/rest-in-space/issues/3)
 4. [PUT to update a resource](https://github.com/shiftyp/rest-in-space/issues/4)
 
-### Check your answers!
+### Checkout (pun intended :smile:) your answers!
 
 After you've implemented the endpoints, you can check your answers by comparing your implementation with the provided answers in the `answers` branch
 
