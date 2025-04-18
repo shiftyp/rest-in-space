@@ -141,3 +141,15 @@ router.put('/:id', (req, res) => {
   // TODO: Return the updated resource
 });
 ```
+
+
+### 5. Check your answers!
+
+After you've implemented the endpoints, you can check your answers by comparing your implementation with the provided answers in the `answers` branch
+
+```bash
+git diff origin/answers
+```
+
+If you see any differences, you can fix them and repeat the process until your implementation matches the answers.
+
