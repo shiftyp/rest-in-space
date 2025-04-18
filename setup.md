@@ -180,8 +180,6 @@ Authentication is the process of verifying who a user is. In the context of APIs
 - **Basic Auth**: Username and password encoded (not encrypted) in Base64, sent in the Authorization header
 - **OAuth 2.0**: A protocol for authorization that enables third-party applications to access resources without sharing credentials
 
-In Express.js, authentication is typically implemented as middleware that checks credentials before allowing the request to proceed to route handlers.
-
 ### 🚦 Authorization
 
 Authorization determines what an authenticated user is allowed to do. While authentication confirms "who you are," authorization decides "what you can do." Common authorization approaches include:
@@ -216,7 +214,7 @@ Beyond authentication and authorization, implementing general security best prac
       res.json({ message: 'Hello, world!' });
     });
     ```
-- **Middleware**: Process requests before they reach route handlers. These are used for "cross-cutting" concerns like logging, error handling, and generic data processing. For example, a middleware callback that logs the time of a request might look like this:
+- **Middleware**: Process requests before they reach route handlers. These are used for "cross-cutting" concerns like authorization, logging, error handling, and generic data processing. For example, a middleware callback that logs the time of a request might look like this:
     ```javascript
     router.use((req, res, next) => {
       console.log('Time:', Date.now());
