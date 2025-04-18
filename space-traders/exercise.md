@@ -13,7 +13,7 @@ In this quick exercise, we'll explore the SpaceTraders API as a group using Swag
 - Swagger UI (included in the project)
 - SpaceTraders.io account (we'll create this in the setup)
 
-## Setup (2 minutes)
+## Setup
 
 ### Register for SpaceTraders.io
 1. Visit [my.spacetraders.io](https://my.spacetraders.io) and create an account
