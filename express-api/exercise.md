@@ -4,6 +4,13 @@
 
 In this exercise, you'll complete a partially built Express.js API for managing fictional space resources. The API follows RESTful principles and includes OpenAPI/Swagger documentation.
 
+## Learning Objectives
+
+- Understand how to implement RESTful endpoints in Express.js
+- Practice handling different HTTP methods
+- Learn how to validate input data
+- Gain experience with error handling in APIs
+
 ## Prerequisites
 
 - Node.js installed (or using the provided IDX environment)
@@ -134,10 +141,3 @@ After implementing each endpoint, you can test it using (in order of ease of use
       -H "Content-Type: application/json" \
       -d '{"name":"Cosmicite","rarity":"Uncommon","value":3000}'
     ```
-
-## Learning Objectives
-
-- Understand how to implement RESTful endpoints in Express.js
-- Practice handling different HTTP methods
-- Learn how to validate input data
-- Gain experience with error handling in APIs
