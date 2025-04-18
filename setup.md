@@ -138,6 +138,7 @@ HTTP status codes indicate the result of the HTTP request. They are grouped into
 - **403 Forbidden**: The client doesn't have permission to access the resource
 - **404 Not Found**: The requested resource doesn't exist
 - **409 Conflict**: The request conflicts with the current state of the resource
+- **418 I'm a teapot** 🫖
 - **422 Unprocessable Entity**: The request was well-formed but contains semantic errors
 
 #### 5xx - Server Error
