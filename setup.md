@@ -20,11 +20,11 @@ REST stands for Representational State Transfer. In a nutshell, REST is an archi
 1. **Resource-Based**: Everything is a resource, identified by a unique URL (Uniform Resource Locator) also known as a URI (Uniform Resource Identifier)
 2. **Stateless**: Each request contains all information needed to complete it, as previously "stated" 😀
 3. **Client-Server Architecture**: Separation of concerns between client and server, with the former requesting and the latter responding
-4. **Uniform Interface**: Consistent way to interact with resources, including consistent URL's
+4. **Uniform Interface**: Consistent way to interact with resources, including consistent URL's, both between resources and over time as the API evolves.
 5. **Layered System**: Client cannot tell if it's connected directly to the server, and not some intermediate layer in front of the server like a proxy, or some deeper layer behind it like a database.
 6. **Cacheability**: Responses must define themselves as cacheable or non-cacheable to prevent clients from reusing stale or inappropriate data but allow for more efficient communication 
 
-There are two additional principles called **Code on Demand** (CoD) and **Hypermedia As The Engine Of Application State** (HATEOAS), which are not directly related to our REST examples, but are aspects of REST as a complete concept. CoD allows clients to request and execute code on the server, which is used for example in websites to load JavaScript and create dynamic pages. HATEOAS allows clients to navigate and interact with resources through hyperlinks, which is can be used for dynamic content navigation, although it is more common in HTML than in JSON.
+There are two additional principles called **Code on Demand** (CoD) and **Hypermedia As The Engine Of Application State** (HATEOAS), which are not directly related to our REST examples, but are aspects of REST as a complete concept. CoD allows clients to request and execute code from server, which is used for example in websites to load JavaScript and create dynamic pages. HATEOAS allows clients to navigate and interact with resources through hyperlinks, which is can be used for dynamic content navigation, although it is more common in HTML than in JSON.
 
 While REST doesn't specify HTTP as the transport mechanism, HTTP is the most common and practical way to implement RESTful APIs. In HTTP REST API's (much acronym 🐶), HTTP methods (POST, GET, PUT / PATCH, DELETE) are used to perform CRUD operations on resources. There are additional methods, like HEAD and OPTIONS, but they are not directly related to our REST examples.
 
