@@ -67,7 +67,7 @@ REST is a set of principles, not a framework. It's a way of thinking about how t
 
 #### 🛑 Non-CRUD Operations
 
-Sometimes you need operations that don't fit neatly into CRUD. For example, you might want to start a process that may not directly change resource state. For these cases you may want to move outside of REST and utilize the "controller" pattern, where a resource, collection, or whole API will define a standalone endpoint that performs some action:
+Sometimes you need operations that don't fit neatly into CRUD. For example, you might want to start a process that may not directly change resource state. For these cases you may want to move outside of REST and utilize the "controller" pattern, where a resource, collection, or the root of an API will define a standalone endpoint that performs some action:
 
 | HTTP Method | URL Pattern | Description |
 |-------------|-------------|-------------|
